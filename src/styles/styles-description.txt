@@ -1,1 +1,0 @@
-This folder can contain CSS or SCSS (Sass) files that define the styles for your components and pages.

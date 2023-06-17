@@ -1,7 +1,0 @@
-The src/pages folder is commonly used in web app projects as a place to organize and store individual React components or files that represent different pages or views of your application.
-
-The purpose of the src/pages folder is to separate and group together the components that correspond to different routes or sections of your web app. Each file or component within this folder typically represents a specific page or view that the user can navigate to within the application.
-
-By organizing your components in the src/pages folder, you can easily manage and maintain the different pages of your web app. It provides a clear structure for developers to locate and work with specific components related to each page, making it easier to understand and modify the application's behavior.
-
-This folder structure also supports scalability, as your project grows and you add more pages or views, you can simply create new files or components within the src/pages folder without cluttering the root directory or mixing unrelated components together.
