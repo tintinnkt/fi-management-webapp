@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import React from 'react'
+import { Outlet,Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Mybutton from './component/Mybutton.jsx'
+import Mybutton from './components/Mybutton.jsx'
 
 
 function App() {
@@ -29,6 +30,11 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* <Link to="/login">
+        <button>Login</button>
+      </Link>
+      <Outlet /> */}
     </>
   )
 }

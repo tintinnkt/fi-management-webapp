@@ -1,1 +1,2 @@
 This folder can contain CSS or SCSS (Sass) files that define the styles for your components and pages.
+Styles: The styles folder is used to store CSS files related to styling your application. It can include global styles, such as a global.css file that sets default styles for your entire application, as well as files for specific component or page styles. By separating styles into dedicated files and folders, you can keep your styles organized and maintainable. You can also use CSS preprocessors or CSS-in-JS solutions within this folder to enhance your styling capabilities.
