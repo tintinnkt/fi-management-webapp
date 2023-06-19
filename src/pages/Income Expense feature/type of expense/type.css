@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
 
 body {
     background-color: #FEE9B1;
-    font-family: "Poppins", sans-serif;
+    
 }
 
 H1 {
@@ -10,20 +10,23 @@ H1 {
     font-size: 90px;
     background-color: rgb(255, 255, 255);
     padding-left: 58px;
-    width: 270px;
-    height: 130px;
+    width: 265px;
+    height: 110px;
     border: 3px solid black;
     border-radius: 20px;
     margin-left: 70px;
     margin-top: 100px;
+    font-family: 'Lilita One', cursive;
+    padding-top: 7px;
 
 }
 
 .NEED {
 
-    font-size: 73px;
-    padding-left: 220px;
-    margin-top: -120px;
+    font-size: 75px;
+    padding-left: 230px;
+    margin-top: -105px;
+    font-family: 'Inconsolata', monospace;
 
 }
 
@@ -85,14 +88,16 @@ img {
 
     font-size: 90px;
     background-color: rgb(255, 255, 255);
-    padding-left: 50px;
-    width: 270px;
-    height: 130px;
+    padding-left: 60px;
+    width: 260px;
+    height: 120px;
     border: 3px solid black;
     border-radius: 20px;
     margin-left: 70px;
     margin-top: 100px;
     padding-right: 20px;
+    font-family: 'Lilita One', cursive;
+    padding-top: 13px;
 
 }
 
@@ -100,13 +105,15 @@ img {
 
     font-size: 90px;
     background-color: rgb(255, 255, 255);
-    padding-left: 50px;
-    width: 372px;
-    height: 130px;
+    padding-left: 75px;
+    width: 347px;
+    height: 120px;
     border: 3px solid black;
     border-radius: 20px;
     margin-left: 70px;
     margin-top: 100px;
     padding-right: 20px;
+    font-family: 'Lilita One', cursive;
+    padding-top: 10px;
 
 }
