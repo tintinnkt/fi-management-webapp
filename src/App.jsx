@@ -1,9 +1,10 @@
 import React from 'react'
-import { Outlet,Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Mybutton from './components/Mybutton.jsx'
+import Topic from './components/topic/topic'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
  
   return (
     <>
+      <Topic />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,11 +32,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-
-      {/* <Link to="/login">
-        <button>Login</button>
-      </Link>
-      <Outlet /> */}
+    
+      <a href=""><button>Login Tintin</button></a>
     </>
   )
 }
