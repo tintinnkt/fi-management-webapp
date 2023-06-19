@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+    background-color: #FEE9B1;
+    font-family: "Poppins", sans-serif;
+}
+
+H1 {
+
+    font-size: 90px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 58px;
+    width: 270px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-top: 100px;
+
+}
+
+.NEED {
+
+    font-size: 73px;
+    padding-left: 220px;
+    margin-top: -120px;
+
+}
+
+.TYPE {
+
+    margin-left: 70px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 140px;
+
+}
+
+.TYPE2 {
+
+    margin-left: 70px;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 140px;
+
+}
+
+.TYPE3 {
+
+    margin-left: 70px;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 800px;
+    height: 140px;
+
+}
+
+img {
+
+    object-fit: cover;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid black;
+    margin-top: 15px;
+    margin-left: 50px;
+
+}
+
+
+#want {
+
+    font-size: 90px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    width: 270px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-top: 100px;
+    padding-right: 20px;
+
+}
+
+#Income {
+
+    font-size: 90px;
+    background-color: rgb(255, 255, 255);
+    padding-left: 50px;
+    width: 372px;
+    height: 130px;
+    border: 3px solid black;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-top: 100px;
+    padding-right: 20px;
+
+}
