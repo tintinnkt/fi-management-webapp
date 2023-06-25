@@ -1,11 +1,11 @@
 import React from 'react';
 import './topic.css'
 
-function Topic() {
+function Topic({text}) {
   return (
     <>
       <header className="topic">
-        <h2>Tintin's Header</h2>
+        <h2>{text}</h2>
       </header>
     </>
   );
