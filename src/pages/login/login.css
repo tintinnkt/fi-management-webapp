@@ -79,6 +79,9 @@ button{
 
 .fillin {
 
+  font-size: 42px;
+  font-family: 'Lilita One', cursive;
+  padding-left: 30px;
   margin-left: 132px;
   margin-top: -55px;
   display: flex;
@@ -88,6 +91,7 @@ button{
   width: 550px;
   border-left: 0px;
   border-right : 0px
+  
   
 
 }
@@ -117,6 +121,8 @@ button{
     display: flex;
     margin-left: 35px;
     font-size: 60px;
+    overflow: hidden;
+    width: 70px;
   
   }
 
@@ -157,26 +163,3 @@ a {
   border: 2px solid black;
 }
 
-.Fixfillin1 {
-
-  height: 50px;
-  width: 550px;
-  position: relative;
-  top: -425px;
-  left: 230px;
-  font-size: 42px;
-  font-family: 'Lilita One', cursive;
-  padding-left: 30px;
-}
-.Fixfillin2 {
-
-  height: 50px;
-  width: 550px;
-  position: relative;
-  top: -733px;
-  left: 230px;
-  font-size: 42px;
-  font-family: 'Lilita One', cursive;
-  color:rgb(51, 51, 51) ;
-  padding-left: 30px;
-}
