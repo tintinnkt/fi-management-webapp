@@ -39,7 +39,7 @@ body {
 .A {
 
   position: relative;
-  top: -820px;
+  top: 350px;
   left: 212px;
   right: 200px;
   display: flex;
@@ -124,18 +124,30 @@ button{
 
     position: relative;
     top: -550px;
+    
+  }
+
+  .Log {
+    
+    overflow: hidden;
+    width: 896px;
+    height: 300px;
   }
 
 .circle {
-
-  margin-top: -2900px;
+  overflow: hidden;
+  margin-top: -1800px;
   margin-left: -850px;
+  
+  width: 1800px;
+  height : 500px
 }
   
 .Circle {
 
   width: 2000px;
   height : 1850px
+  
   
 }
 
@@ -145,3 +157,26 @@ a {
   border: 2px solid black;
 }
 
+.Fixfillin1 {
+
+  height: 50px;
+  width: 550px;
+  position: relative;
+  top: -425px;
+  left: 230px;
+  font-size: 42px;
+  font-family: 'Lilita One', cursive;
+  padding-left: 30px;
+}
+.Fixfillin2 {
+
+  height: 50px;
+  width: 550px;
+  position: relative;
+  top: -733px;
+  left: 230px;
+  font-size: 42px;
+  font-family: 'Lilita One', cursive;
+  color:rgb(51, 51, 51) ;
+  padding-left: 30px;
+}
