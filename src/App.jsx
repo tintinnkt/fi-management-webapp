@@ -7,12 +7,14 @@ import Mybutton from './components/Mybutton.jsx'
 import Topic from './components/topic/topic'
 
 
+
 function App() {
   
  
   return (
     <>
       <Topic text="Login" />
+      
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -23,8 +25,8 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <Mybutton/> Oneal<br />
-        <Mybutton/>   Hok
+        <Mybutton name={"Oneal"}/>
+        <Mybutton name={"Hok"}/>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>

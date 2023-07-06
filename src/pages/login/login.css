@@ -5,7 +5,7 @@ body {
   font-family: 'Lilita One', cursive;
   font-size: 50px;
   zoom: 170%;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
 
 .Login {
@@ -26,7 +26,6 @@ body {
 }
 
 .Username {
-
   border: 2px solid rgb(55, 55, 55);
   border-radius: 10px;
   width: 750px;
@@ -37,16 +36,13 @@ body {
 }
 
 .A {
-
   position: relative;
-  top: 350px;
+  top: 320px;
   left: 212px;
   right: 200px;
   display: flex;
   font-size: 40px;
   color: rgba(80, 80, 80, 0.797);
-
-
 }
 
 .B {
@@ -54,31 +50,27 @@ body {
   color: rgb(255, 167, 52);
 }
 
-.username{
-margin-top: 13px;
-margin-left: 130px;
-font-size: 42px;
-color: rgba(80, 80, 80, 0.797);
-letter-spacing: 2px;
+.username {
+  margin-top: 13px;
+  margin-left: 130px;
+  font-size: 42px;
+  color: rgba(80, 80, 80, 0.797);
+  letter-spacing: 2px;
 }
 
-button{
-
+button {
   width: 200px;
   height: 400 px;
 }
 
-.icon{
-
+.icon {
   position: relative;
   display: flex;
   margin-left: 35px;
   font-size: 60px;
-
 }
 
 .fillin {
-
   font-size: 42px;
   font-family: 'Lilita One', cursive;
   padding-left: 30px;
@@ -90,76 +82,42 @@ button{
   height: 50px;
   width: 550px;
   border-left: 0px;
-  border-right : 0px
-  
-  
-
-}
-  
-.Password {
-
-  border: 2px solid rgb(55, 55, 55);
-  border-radius: 10px;
-  width: 750px;
-  height: 150px;
-  margin-left: 100px;
-  margin-top: 100px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-right: 0px
 }
 
-.password{
-  margin-top: 13px;
-  margin-left: 130px;
-  font-size: 42px;
-  color: rgba(80, 80, 80, 0.797);
-  letter-spacing: 2px;
-  }
+.icon {
+  position: relative;
+  display: flex;
+  margin-left: 35px;
+  font-size: 60px;
+  overflow: hidden;
+  width: 70px;
+}
 
-  .icon{
+.loginbutton {
+  position: relative;
+  top: -550px;
+}
 
-    position: relative;
-    display: flex;
-    margin-left: 35px;
-    font-size: 60px;
-    overflow: hidden;
-    width: 70px;
-  
-  }
-
-  .loginbutton{
-
-    position: relative;
-    top: -550px;
-    
-  }
-
-  .Log {
-    
-    overflow: hidden;
-    width: 896px;
-    height: 300px;
-  }
+.Log {
+  overflow: hidden;
+  width: 896px;
+  height: 300px;
+}
 
 .circle {
   overflow: hidden;
   margin-top: -1800px;
   margin-left: -850px;
-  
   width: 1800px;
-  height : 500px
+  height: 500px
 }
-  
+
 .Circle {
-
   width: 2000px;
-  height : 1850px
-  
-  
+  height: 1850px
 }
-
 
 a {
-
   border: 2px solid black;
 }
-

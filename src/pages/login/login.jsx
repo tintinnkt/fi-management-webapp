@@ -1,36 +1,46 @@
 import React from 'react';
-import './login.css'
+import './login.css';
 
-function Login() {
+const Login = () => {
   return (
-    <>
-      <h2 className="welcome">WELCOME</h2>
-      <div className="wrapper fadeInDown">
-        <div id="formContent">
-          {/* Tabs Titles */}
-          <h2 className="active"> Sign In </h2>
-          <h2 className="inactive underlineHover">Sign Up </h2>
-
-          {/* Icon */}
-          <div className="fadeIn first">
-            <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
-          </div>
-
-          {/* Login Form */}
-          <form>
-            <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" />
-            <input type="text" id="password" className="fadeIn third" name="login" placeholder="password" />
-            <input type="submit" className="fadeIn fourth" value="Log In" />
-          </form>
-
-          {/* Remind Passowrd */}
-          <div id="formFooter">
-            <a className="underlineHover" href="#">Forgot Password?</a>
-          </div>
-        </div>
+    <div>
+      <div className="Login">Login</div>
+      <div className="continue">
+        We will help you <i className="bi bi-balloon-heart"></i>
       </div>
-    </>
+
+      <div className="Username">
+        <div className="username" id="">
+          Username
+        </div>
+        <div className="icon">
+          <i className="bi bi-person-circle"></i>
+        </div>
+        <input type="text" className="fillin" id="usn" style={{ fontSize: "50px", color: "black" }} />
+      </div>
+
+      <div className="Username">
+        <div className="username">Password</div>
+        <div className="icon">
+          <i className="bi bi-lock"></i>
+        </div>
+        <input type="password" className="fillin" id="pw" />
+      </div>
+
+      <div className="Log">
+        <img className="loginbutton" src="./loginpicture/Loginbutton.png" height="1500px" width="1300px" alt="Login" />
+      </div>
+
+      <div className="A">
+        Don't have an account?
+        <div className="B">Sign up</div>
+      </div>
+
+      <div className="circle">
+        <img className="Circle" src="./loginpicture/circle.png" alt="Circle" />
+      </div>
+    </div>
   );
-}
+};
 
 export default Login;
