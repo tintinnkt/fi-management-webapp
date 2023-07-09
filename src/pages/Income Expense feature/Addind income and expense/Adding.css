@@ -78,19 +78,10 @@ button {
     width: 150px;
     height: 170px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 2px solid black;
     background-color: white
     
     
-}
-
-.type {
-    width: 216.9px;
-    height: 49.5px;
-    position: absolute;
-    left: 61px;
-    top: 102px;
-    border-radius: 10px;
 }
 
 .money {
@@ -98,6 +89,23 @@ button {
     height: 49.5px;
     position: absolute;
     left: 61px;
+    top: 102px;
+    border-radius: 10px;
+    font-family: 'Lilita One', cursive;
+    font-size: 36px;
+    text-align: center;
+}
+
+.type {
+    width: 216.9px;
+    height: 49.5px;
+    position: absolute;
+    left: 61px;
     top: 180px;
     border-radius: 10px;
+    font-family: 'Lilita One', cursive;
+    font-size: 36px;
+    text-align: center;
+    
 }
+
