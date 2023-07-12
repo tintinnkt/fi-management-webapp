@@ -1,22 +1,14 @@
 .topic {
-  background: linear-gradient(90deg, orange, rgb(245, 247, 119),#f1f779);
-  padding-top: 20px;
-  text-align: center;
-  color: #232323;
-  margin-top: -10%;
-  margin-left: -12%;
-  margin-right: -12%;
-  overflow: hidden;
-}
 
-.topic h1 {
-  color: white;
-}
-
-.topic::after {
-  content: "";
-  display: block;
+  font-family: 'Lilita One', cursive;
+  font-size: 36px;
+  background-image: linear-gradient(to left, #ffe57c, #ffb300);
   width: 100%;
-  height: 2px;
-  background-color: #222;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid black;
 }

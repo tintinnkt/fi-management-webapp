@@ -2,9 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+
+//components
 import Mybutton from './components/Mybutton.jsx'
 import Topic from './components/topic/topic'
+
+//styles
+// import './App.css'
+import './styles/fonts.css'
 
 
 

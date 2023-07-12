@@ -1,14 +1,10 @@
-import React from 'react';
-import './topic.css'
+import React from 'react'
+import './Topic.css'
 
 function Topic({text}) {
   return (
-    <>
-      <header className="topic">
-        <h2>{text}</h2>
-      </header>
-    </>
-  );
+    <div className="topic">{text}</div>
+  )
 }
 
-export default Topic;
+export default Topic
