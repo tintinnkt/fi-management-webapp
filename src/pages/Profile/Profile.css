@@ -35,8 +35,57 @@ body {
 
 }
 
-.profile {
+.container .bi {
 
+    font-size: 70px;
+    position: relative;
+    top: 20px;
+    left: 135px;
     
 }
 
+
+.Name {
+
+    font-size: 23.65px;
+    position: relative;
+    left: 40.25%;
+    top: 30px
+
+}
+
+.Income{
+
+    font-size: 18.92px;
+    position: absolute;
+    top: 155px;
+    left:15%;
+}
+
+.Expense {
+
+    font-size: 18.92px;
+    position: absolute;
+    top: 500px;
+    top: 155px;
+    left: 50%;
+
+}
+
+.Net {
+
+    font-size: 18.92px;
+    position: absolute;
+    top: 190px;
+    left: 37.5%;
+}
+
+.line {
+
+    background-color: black;
+    width: 260px;
+    height: 1px;
+    position: absolute;
+    top: 230px;
+    left: 13%;
+}
