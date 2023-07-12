@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+
+body {
+
+    font-family: 'Lilita One', cursive;
+    background-color: #FFFFE8;
+}
+
+.container {
+
+    width: 350.55px;
+    height: 735px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    top: 50px;
+    left: 22px;
+ 
+
+
+}
+.logout {
+
+    background-color: #F6D06B;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 127px;
+    height: 50px;
+    font-family: 'Lilita One', cursive;
+    font-size: 34px;
+    position: relative;
+    left: 107px;
+    top: 550px;
+
+}
+
+.profile {
+
+    
+}
+
