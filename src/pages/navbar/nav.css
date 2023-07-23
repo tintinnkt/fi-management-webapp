@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* Set the font-family to 'Lilita One' for the entire body, including the navigation bar */
+    font-family: 'Lilita One', cursive;
+  }
+  
+  /* Style for the bottom navigation bar */
+  .bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EBC5A1; /* Background color */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the navigation items */
+  .nav-item {
+    text-decoration: none;
+    color: black; /* Text color is changed to black */
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Additional styles for the "Add" button */
+  .nav-item.special {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFC033; /* Background color of the "Add" button */
+    color: #fff;
+    border-radius: 50%;
+    padding: 18px; /* Increase the padding to make the button larger */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Adjust the size of the plus symbol */
+  .nav-item.special i.material-icons {
+    font-size: 24px; /* Set a specific font size for the plus symbol */
+    line-height: 0.75em; /* Adjust the line height to vertically center the plus symbol */
+  }
+  
+  /* Adjust font size for smaller screens */
+  @media (max-width: 480px) {
+    .nav-item {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+  
