@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 150px;
 
 }
 
@@ -77,7 +77,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: -705px;
+    margin-top: -735px;
     z-index: 1;
 
 }
