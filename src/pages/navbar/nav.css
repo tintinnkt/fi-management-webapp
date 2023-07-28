@@ -8,6 +8,7 @@ body {
 }
 
 
+
 .bottom-navigation {
   position: fixed;
   bottom: 0;
@@ -17,47 +18,67 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 12px 0;
+  padding: 0px 0;
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
 .nav-item {
   text-decoration: none;
-  color: black; /* Text color is changed to black */
-  font-size: 14px;
+  color: black; 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 6px 16px;
-  border-radius: 8px;
+  border-radius: 0px;
   transition: color 0.3s ease;
 }
 
-/* Additional styles for the "Add" button */
+
+.nav-item1 {
+
+  text-decoration: none;
+  color: black; 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 55px;
+}
+.nav-item2 {
+
+  text-decoration: none;
+  color: black; 
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 55px;
+}
+
+
 .nav-item.special {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the button both horizontally and vertically */
-  background-color: #FFC033; /* Background color of the "Add" button */
-  color: #fff;
+  transform: translate(-50%, -50%); 
+  background-color: #FFC033; 
   border-radius: 50%;
-  width: 48px; /* Set a slightly smaller width for the button */
-  height: 48px; /* Set a slightly smaller height for the button */
+  width: 43.2px; 
+  height:43.2px; 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-/* Adjust the size of the plus symbol */
+
 .nav-item.special i.material-icons {
-  font-size: 32px; /* Set a specific font size for the plus symbol */
-  line-height: 48px; /* Adjust the line height to vertically center the plus symbol */
+  font-size:50px;
+  color: #FFFFE8; 
+  line-height: 48px; 
 }
 
-/* Create a logo placeholder with a specified width and height */
+
 .logo-placeholder {
-  width: 50px; /* Set the width for the logo placeholder */
-  height: 45px; /* Set the height for the logo placeholder */
+  width: 41.7px; 
+  height: 36px; /* Set the height for the logo placeholder */
   background-color: #FFC033; /* Set a background color for the logo placeholder */
   border-radius: 50%; /* Make it circular */
   overflow: hidden;
@@ -78,9 +99,15 @@ body {
 /* Adjust font size for smaller screens */
 @media (max-width: 480px) {
   .nav-item {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 15px;
+    padding: 5px 12px;
   }
 } 
 
-/*  */
+
+.Name {
+
+font-size: 12.5px;
+margin-top: 2px;
+}
+
