@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  /* Set the font-family to 'Lilita One' for the entire body, including the navigation bar */
-  font-family: 'Lilita One', cursive;
+  
+  font-family : 'Lilita One', cursive;
 }
 
-/* Style for the bottom navigation bar */
+
 .bottom-navigation {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #EBC5A1; /* Background color */
+  background-color: #EBC5A1; 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -21,7 +21,7 @@ body {
   box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the navigation items */
+
 .nav-item {
   text-decoration: none;
   color: black; /* Text color is changed to black */
@@ -81,4 +81,6 @@ body {
     font-size: 12px;
     padding: 6px 12px;
   }
-}
+} 
+
+/*  */

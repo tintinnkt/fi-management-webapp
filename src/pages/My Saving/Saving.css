@@ -20,37 +20,40 @@ body {
     border-bottom: 2px solid black;
 }
 
-.img {
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
 
-    width: 60%;
-    height: 60%;
-    
-    margin-top: 17px;
 }
+
+
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 120px;
+
+}
+
 
 .save {
-
-    position: relative;
-    top: 138px;
-    left: 20px;
-    width: 150px;
-    height: 230px;
+    width: 45%;
+    margin: 5px;
+    text-align: center;
 }
 
-.save1 {
 
-    position: relative;
-    top: -551px;
-    left: 220px;
-    width: 150px;
-    height: 230px;
+.img {
+
+    width: 50%;
+    height: 50%;
 }
-
 
 .Name {
 
-font-size: 20px;
-
+    font-size: 20px;
 }
 
 .Goal {
@@ -59,10 +62,7 @@ font-size: 20px;
 
 }
 
-.Recent {
-
-   
-}
+.Recent {}
 
 .percent {
 
@@ -70,27 +70,14 @@ font-size: 20px;
     margin-top: 2px;
 }
 
-.Line {
-
-    height: 800;
-    border: 1px solid black;
-}
-
-hr {
-    border: none;
-    border-top: 1px solid black;
-    margin: 0 auto;
-    width: 50%;
-  }
-
-  .vertical-line {
+.vertical-line {
     width: 1px;
     height: 795px;
     background-color: black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: -1285px;
+    margin-top: -705px;
     z-index: 1;
 
-  }
+}
