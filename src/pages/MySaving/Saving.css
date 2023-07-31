@@ -4,7 +4,7 @@ body {
 
     font-family: 'Lilita One', cursive;
 }
-
+/* 
 .Title {
 
     font-family: 'Lilita One', cursive;
@@ -18,7 +18,7 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 2px solid black;
-}
+} */
 
 .row {
     display: flex;
@@ -38,37 +38,7 @@ body {
 }
 
 
-.save {
-    width: 45%;
-    margin: 5px;
-    text-align: center;
-}
 
-
-.img {
-
-    width: 50%;
-    height: 50%;
-}
-
-.Name {
-
-    font-size: 20px;
-}
-
-.Goal {
-
-    margin-top: 5px;
-
-}
-
-.Recent {}
-
-.percent {
-
-    font-size: 22px;
-    margin-top: 2px;
-}
 
 .vertical-line {
     width: 1px;
@@ -82,7 +52,7 @@ body {
 
 }
 
-.bottom-navigation {
+/* .bottom-navigation {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -151,25 +121,25 @@ body {
   
   .logo-placeholder {
     width: 41.7px; 
-    height: 36px; /* Set the height for the logo placeholder */
-    background-color: #FFC033; /* Set a background color for the logo placeholder */
-    border-radius: 50%; /* Make it circular */
+    height: 36px; 
+    background-color: #FFC033; 
+    border-radius: 50%;
     overflow: hidden;
   }
   
   .logo-placeholder img{
-    width: 100%; /* Make the image take up the full width of the logo placeholder */
-    height: 100%; /* Make the image take up the full height of the logo placeholder */
-    object-fit: cover; /* Ensure the image is scaled properly within the circular area */
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
   }
   
   
-  /* Add margin between the "Saving" and "Debt" buttons and the "Adding" button */
+
   .nav-item:not(.special) {
-    margin-right: 12px; /* Adjust the margin as needed */
+    margin-right: 12px;
   }
   
-  /* Adjust font size for smaller screens */
+
   @media (max-width: 480px) {
     .nav-item {
       font-size: 15px;
@@ -182,6 +152,5 @@ body {
   
   font-size: 12.5px;
   margin-top: 2px;
-  }
+  } */
   
-  /*  */

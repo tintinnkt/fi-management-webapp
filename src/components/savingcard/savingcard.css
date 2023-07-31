@@ -1,0 +1,41 @@
+.savecard {
+  
+    width: 45%;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+
+    padding-bottom: 15px;
+}
+
+
+.img {
+    padding-top: 10px;
+    width: 45%;
+    height: 45%;
+}
+
+.Name {
+    padding-bottom: 10px;
+}
+
+.Goal {
+
+    margin-top: 5px;
+
+
+}
+
+.Recent {
+    font-size: 14px;
+}
+
+.percent {
+
+    font-size: 14px;
+    margin-top: 2px;
+}
+span{
+    color: #5222AF;
+    font-size: 17px;
+}
