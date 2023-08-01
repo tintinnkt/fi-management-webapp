@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+
+body {
+
+    font-family: 'Lilita One', cursive;
+    background-color: #FEE9B1;
+}
+
+button {
+
+    background-color: #FFC033;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 144px;
+    height: 50px;
+    font-family: 'Lilita One', cursive;
+    font-size: 36px;
+    position: relative;
+    top: 350px;
+    left: 130px;
+  }
+
+.container {
+
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    top: 30px;
+    left: 50px;
+    border-radius: 10px;
+}
+
+.Name {
+
+font-size: 30px;
+position: absolute;
+left: 100px;
+top: 20px;
+}
+
+.Goal {
+
+    font-size: 30px;
+}
+
+.Recent{
+
+    font-size: 30px;
+}
+
+.Nameint {
+
+    position: absolute;
+    top: 50px;
+}
+
+.Goalint{
+
+
+}
+
+.Recentint {
+
+
+}
