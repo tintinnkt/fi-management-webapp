@@ -6,6 +6,10 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 //pages
 import Saving from './pages/MySaving/Saving'
 import App from './App'
+import Adding from './pages/Income Expense feature/Addind income and expense/Adding'
+
+//css
+import './styles/fonts.css'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +19,10 @@ const router = createBrowserRouter([
   {
     path : "/",
     element : <App />
+  },
+  {
+    path : "/create",
+    element : <Adding />
   }
 ])
 

@@ -1,221 +1,210 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
-
 body {
 
-    font-family: 'Lilita One', cursive;
-}
-
-.Title {
-
-    font-family: 'Lilita One', cursive;
-    font-size: 32px;
-    background-image: linear-gradient(to left, #ffe57c, #ffb300);
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid black;
+  font-family: 'Lilita One', cursive;
 }
 
 #container {
 
-    background-color: #FEE9B1;
-    position: relative;
-    border-radius: 10px;
-    border: 1px solid black;
-    top: 140px;
-    left: 25px;
-    width: 350px;
-    height: 530px;
+  background-color: #FEE9B1;
+  position: relative;
+  border-radius: 10px;
+  border: 1px solid black;
+  top: 140px;
+  left: 25px;
+  width: 350px;
+  height: 530px;
 }
 
 button {
 
-    background-color: #FFC033;
-    border-radius: 5px;
-    border: 1px solid black;
-    width: 144px;
-    height: 50px;
-    font-family: 'Lilita One', cursive;
-    font-size: 36px;
-    position: relative;
-    top: 187px;
-    left: 130px;
+  background-color: #FFC033;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 144px;
+  height: 50px;
+  font-family: 'Lilita One', cursive;
+  font-size: 36px;
+  position: relative;
+  top: 187px;
+  left: 130px;
 }
 
 #nav {
 
-    border: 0.5px solid black;
-    width: 100%;
-    position: relative;
-    left: 0px;
-    top: 250px;
+  border: 0.5px solid black;
+  width: 100%;
+  position: relative;
+  left: 0px;
+  top: 250px;
 }
 
 .Howmuch {
-    font-size: 36px;
-    position: absolute;
-    top: 30px;
-    left: 85px;
+  font-size: 36px;
+  position: absolute;
+  top: 30px;
+  left: 85px;
 }
 
 .Date {
 
-    font-size: 36px;
-    position: absolute;
-    left: 140px;
-    top: 270px;
-    
+  font-size: 36px;
+  position: absolute;
+  left: 140px;
+  top: 270px;
+
 }
 
 .calender {
-    position: absolute;
-    top: 335px;
-    left: 102px;
-    width: 150px;
-    height: 170px;
-    border-radius: 5px;
-    border: 2px solid black;
-    background-color: white
-    
-    
+  position: absolute;
+  top: 335px;
+  left: 102px;
+  width: 150px;
+  height: 170px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: white
 }
 
 .money {
-    width: 216.9px;
-    height: 49.5px;
-    position: absolute;
-    left: 61px;
-    top: 102px;
-    border-radius: 10px;
-    font-family: 'Lilita One', cursive;
-    font-size: 36px;
-    text-align: center;
+  width: 216.9px;
+  height: 49.5px;
+  position: absolute;
+  left: 61px;
+  top: 102px;
+  border-radius: 10px;
+  font-family: 'Lilita One', cursive;
+  font-size: 36px;
+  text-align: center;
 }
 
 .type {
-    width: 216.9px;
-    height: 49.5px;
-    position: absolute;
-    left: 61px;
-    top: 180px;
-    border-radius: 10px;
-    font-family: 'Lilita One', cursive;
-    font-size: 36px;
-    text-align: center;
-    background-color: white;
-    border: 2px solid black;
-    
+  width: 216.9px;
+  height: 49.5px;
+  position: absolute;
+  left: 61px;
+  top: 180px;
+  border-radius: 10px;
+  font-family: 'Lilita One', cursive;
+  font-size: 36px;
+  text-align: center;
+  background-color: white;
+  border: 2px solid black;
+
 }
 
 
-.bi-arrow-down-circle { 
+.bi-arrow-down-circle {
 
-    font-size: 20px;
-    margin-left: 180px;
+  font-size: 20px;
+  margin-left: 180px;
 }
 
 .bottom-navigation {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #EBC5A1; 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0px 0;
-    box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #EBC5A1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px 0;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 0px;
+  transition: color 0.3s ease;
+}
+
+
+.nav-item1 {
+
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-right: 55px;
+}
+
+.nav-item2 {
+
+  text-decoration: none;
+  color: black;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 55px;
+}
+
+
+.nav-item.special {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFC033;
+  border-radius: 50%;
+  width: 43.2px;
+  height: 43.2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+
+.nav-item.special i.material-icons {
+  font-size: 50px;
+  color: #FFFFE8;
+  line-height: 48px;
+}
+
+
+.logo-placeholder {
+  width: 41.7px;
+  height: 36px;
+  /* Set the height for the logo placeholder */
+  background-color: #FFC033;
+  /* Set a background color for the logo placeholder */
+  border-radius: 50%;
+  /* Make it circular */
+  overflow: hidden;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  /* Make the image take up the full width of the logo placeholder */
+  height: 100%;
+  /* Make the image take up the full height of the logo placeholder */
+  object-fit: cover;
+  /* Ensure the image is scaled properly within the circular area */
+}
+
+
+/* Add margin between the "Saving" and "Debt" buttons and the "Adding" button */
+.nav-item:not(.special) {
+  margin-right: 12px;
+  /* Adjust the margin as needed */
+}
+
+/* Adjust font size for smaller screens */
+@media (max-width: 480px) {
   .nav-item {
-    text-decoration: none;
-    color: black; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px 16px;
-    border-radius: 0px;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    padding: 5px 12px;
   }
-  
-  
-  .nav-item1 {
-  
-    text-decoration: none;
-    color: black; 
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-right: 55px;
-  }
-  .nav-item2 {
-  
-    text-decoration: none;
-    color: black; 
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-left: 55px;
-  }
-  
-  
-  .nav-item.special {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: #FFC033; 
-    border-radius: 50%;
-    width: 43.2px; 
-    height:43.2px; 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  
-  
-  .nav-item.special i.material-icons {
-    font-size:50px;
-    color: #FFFFE8; 
-    line-height: 48px; 
-  }
-  
-  
-  .logo-placeholder {
-    width: 41.7px; 
-    height: 36px; /* Set the height for the logo placeholder */
-    background-color: #FFC033; /* Set a background color for the logo placeholder */
-    border-radius: 50%; /* Make it circular */
-    overflow: hidden;
-  }
-  
-  .logo-placeholder img{
-    width: 100%; /* Make the image take up the full width of the logo placeholder */
-    height: 100%; /* Make the image take up the full height of the logo placeholder */
-    object-fit: cover; /* Ensure the image is scaled properly within the circular area */
-  }
-  
-  
-  /* Add margin between the "Saving" and "Debt" buttons and the "Adding" button */
-  .nav-item:not(.special) {
-    margin-right: 12px; /* Adjust the margin as needed */
-  }
-  
-  /* Adjust font size for smaller screens */
-  @media (max-width: 480px) {
-    .nav-item {
-      font-size: 15px;
-      padding: 5px 12px;
-    }
-  } 
-  
-  
-  .Name {
-  
+}
+
+
+.Name {
+
   font-size: 12.5px;
   margin-top: 2px;
-  }
+}
