@@ -9,17 +9,18 @@ import Login from './pages/login/login'
 //styles
 // import './App.css'
 import './styles/fonts.css'
-import Saving from './pages/MySaving/Saving'
+import Topic from './components/topic/topic'
+import NavigationBar from './components/navbar/nav'
 
 
 
 function App() {
-  
- 
+
+
   return (
     <>
-      <Saving />
-      
+      <Topic text="hello" />
+      <NavigationBar />
     </>
   )
 }

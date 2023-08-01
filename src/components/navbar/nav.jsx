@@ -5,7 +5,7 @@ import './nav.css';
 const NavigationBar = () => {
   return (
     <nav className="bottom-navigation">
-      <Link to="/home" className="nav-item">
+      <Link to="/" className="nav-item">
         <div className="logo-placeholder">
           <img src="https://cdn-icons-png.flaticon.com/512/2544/2544087.png" alt="Home" />
         </div>

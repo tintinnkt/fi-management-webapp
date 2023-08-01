@@ -1,11 +1,5 @@
  @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
 
-body {
-  margin: 0;
-  padding: 0;
-  
-  font-family : 'Lilita One', cursive;
-}
 
 
 
@@ -42,7 +36,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-right: 55px;
+  margin-right: 10%;
 }
 .nav-item2 {
 
@@ -51,7 +45,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-left: 55px;
+  margin-left: 10%;
 }
 
 
@@ -111,7 +105,7 @@ font-size: 12.5px;
 margin-top: 2px;
 }
 
-img{
+.img-small{
   width: 256;
   height: 256;
 }
