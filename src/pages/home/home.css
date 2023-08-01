@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+body {
+
+    font-family: 'Lilita One', cursive;
+}
+
+.Title {
+
+    font-family: 'Lilita One', cursive;
+    background-image: linear-gradient(to left, #ffe57c, #ffb300);
+    width: 100%;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    text-align: center;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid black;
+    height: 70px;
+}
+
+
+.totalbalance-value {
+
+    font-size: 32px;
+    letter-spacing: 2px;
+    position: absolute;
+   left: 40px;
+   top: 23px;
+}
+
+.totalbalance {
+    position: absolute;
+    left: 40px;
+    top: 55px;
+    font-size: 20px;
+
+}
+
+.bi-bell-fill {
+
+    position: absolute;
+    right:20px;
+    top: 28px;
+    font-size: 20px;
+    color: black;
+}
+
+.bi-emoji-smile {
+
+    position: absolute;
+    top: 28px;
+    left: 140px;
+    font-size: 25px;
+}
+
+.spending-record {
+
+font-size: 27px;
+margin-top: 20px;
+margin-left: 20px;
+
+}

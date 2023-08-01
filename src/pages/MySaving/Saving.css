@@ -4,7 +4,7 @@ body {
 
     font-family: 'Lilita One', cursive;
 }
-/* 
+ 
 .Title {
 
     font-family: 'Lilita One', cursive;
@@ -18,7 +18,7 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 2px solid black;
-} */
+} 
 
 .row {
     display: flex;
@@ -37,6 +37,39 @@ body {
 
 }
 
+.save {
+  width: 45%;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.img {
+
+  width: 50%;
+  height: 50%;
+}
+
+.Name {
+
+  font-size: 20px;
+}
+
+.Goal {
+
+  margin-top: 5px;
+
+}
+
+.Recent {}
+
+.percent {
+
+  font-size: 22px;
+  margin-top: 2px;
+}
+
+
 
 
 
@@ -52,7 +85,7 @@ body {
 
 }
 
-/* .bottom-navigation {
+ .bottom-navigation {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -152,5 +185,4 @@ body {
   
   font-size: 12.5px;
   margin-top: 2px;
-  } */
-  
+  } 
