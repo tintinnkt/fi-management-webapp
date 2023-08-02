@@ -16,17 +16,18 @@ button {
     font-family: 'Lilita One', cursive;
     font-size: 36px;
     position: relative;
-    top: 350px;
+    top: 150px;
     left: 130px;
+    cursor: pointer;
   }
 
 .container {
 
     background-color: white;
     width: 300px;
-    height: 400px;
+    height: 600px;
     position: relative;
-    top: 30px;
+    top: 40px;
     left: 50px;
     border-radius: 10px;
 }
@@ -35,32 +36,74 @@ button {
 
 font-size: 30px;
 position: absolute;
-left: 100px;
-top: 20px;
+left: 110px;
+top: 200px;
 }
 
 .Goal {
-
+   
+    position: absolute;
+    left: 110px;
+    top: 320px;
     font-size: 30px;
 }
 
 .Recent{
 
+   
+    position: absolute;
+    left: 60px;
+    top: 450px;
     font-size: 30px;
 }
 
 .Nameint {
 
     position: absolute;
-    top: 50px;
+    top: 250px;
+    left: 60px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    text-align: center;
+
 }
 
 .Goalint{
 
-
+    position: absolute;
+    top: 360px;
+    left: 60px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    text-align: center;
 }
 
 .Recentint {
 
-
+    position: absolute;
+    top: 500px;
+    left: 60px;
+    border-radius: 5px;
+    width: 180px;
+    height: 30px;
+    font-size: 30px;
+    font-family: 'Lilita One', cursive;
+    text-align: center;
 }
+
+.img {
+
+    width: 40%;
+    height: 25%;
+    position: absolute;
+    left: 85px;
+    top: 20px;
+  }
+  
+
