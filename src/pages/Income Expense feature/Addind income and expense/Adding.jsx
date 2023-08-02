@@ -25,4 +25,4 @@ function Adding() {
     )
 }
 
-// export default Adding
+export default Adding
