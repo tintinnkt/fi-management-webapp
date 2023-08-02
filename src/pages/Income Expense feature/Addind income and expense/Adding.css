@@ -3,7 +3,7 @@ body {
   font-family: 'Lilita One', cursive;
 }
 
-#container {
+.container {
 
   background-color: #FEE9B1;
   position: relative;
@@ -13,9 +13,13 @@ body {
   left: 25px;
   width: 350px;
   height: 530px;
+  justify-content: center;
 }
-
-button {
+.dropdown{
+  justify-content: center;
+  margin: auto;
+}
+.rec-btn {
 
   background-color: #FFC033;
   border-radius: 5px;

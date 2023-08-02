@@ -10,6 +10,9 @@ import Adding from './pages/Income Expense feature/Addind income and expense/Add
 
 //css
 import './styles/fonts.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import './index.css'
 
 const router = createBrowserRouter([
   {

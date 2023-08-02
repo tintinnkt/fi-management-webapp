@@ -1,9 +1,5 @@
- @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
-
-
-
-
 .bottom-navigation {
+  font-family: 'Lilita One', cursive;
   position: fixed;
   bottom: 0;
   left: 0;
