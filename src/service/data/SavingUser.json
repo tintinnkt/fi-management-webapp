@@ -4,7 +4,7 @@
     "userid": 101,
     "name": "Tesla Model X",
     "goal": 30000,
-    "current": 7500
+    "current": 750
   },
   {
     "id": 2,
@@ -16,14 +16,14 @@
   {
     "id": 3,
     "userid": 103,
-    "name": "Alice Johnson",
+    "name": "buy ",
     "goal": 7500,
     "current": 6800
   },
   {
     "id": 4,
     "userid": 101,
-    "name": "Michael Brown",
+    "name": "Brown shirt",
     "goal": 15000,
     "current": 11200
   },

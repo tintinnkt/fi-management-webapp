@@ -2,7 +2,7 @@ import React from 'react'
 import dt from '../../service/data/SavingUser.json'
 
 //component
-import Savingcard from '../../components/savingcard/savingcard'
+import Savingcard from '../../components/card/savingcard'
 import Topic from '../../components/topic/topic'
 import NavigationBar from '../../components/navbar/nav'
 
@@ -21,7 +21,6 @@ function Saving() {
           ))}
     </div>
     <div className="row">
-      
       
     </div>
 
