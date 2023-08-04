@@ -1,0 +1,51 @@
+[
+  {
+    "id": 10,
+    "userid": 101,
+    "name": "Tesla Model X",
+    "goal": 30000,
+    "current": 7500
+  },
+  {
+    "id": 2,
+    "userid": 101,
+    "name": "NY party",
+    "goal": 5000,
+    "current": 3200
+  },
+  {
+    "id": 3,
+    "userid": 103,
+    "name": "Alice Johnson",
+    "goal": 7500,
+    "current": 6800
+  },
+  {
+    "id": 4,
+    "userid": 101,
+    "name": "Michael Brown",
+    "goal": 15000,
+    "current": 11200
+  },
+  {
+    "id": 5,
+    "userid": 105,
+    "name": "Emily Davis",
+    "goal": 3000,
+    "current": 2400
+  },
+  {
+    "id": 6,
+    "userid": 101,
+    "name": "iPhone S20+ promax",
+    "goal": 8000,
+    "current": 6200
+  },
+  {
+    "id": 7,
+    "userid": 101,
+    "name": "???",
+    "goal": 4800,
+    "current": 320
+  }
+]
