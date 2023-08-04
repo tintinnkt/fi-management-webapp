@@ -1,5 +1,5 @@
 import React from 'react'
-import './savingcard.css'
+import './card.css'
 
 function Savingcard({name , goal,current}) {
   const piggyUrl = "https://cdn-icons-png.flaticon.com/512/9030/9030761.png";
