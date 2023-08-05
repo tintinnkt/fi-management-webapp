@@ -1,9 +1,10 @@
 import React from 'react';
-import './Profile.css'; // Import the CSS file if using this JSX in a React component
+import './Profile.module.css';
 
 import NavigationBar from '../../components/navbar/nav' 
-const ProfileComponent = () => {
+const Profile = () => {
   return (
+    <>
     <div className="container">
       <div className="profile"><i className="bi bi-person-circle"></i></div>
       <div className="Name">Name</div>
@@ -14,8 +15,9 @@ const ProfileComponent = () => {
       <div className="Report"></div>
       <button className="logout">Log out</button>
     </div>
-    
+    <NavigationBar />
+    </>
   );
 };
 
-export default ProfileComponent;
+export default Profile;

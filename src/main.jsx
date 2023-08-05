@@ -7,13 +7,14 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Saving from './pages/MySaving/Saving'
 import App from './App'
 import Adding from './pages/Income Expense feature/Addind income and expense/Adding'
+import Debt from './pages/Debt/Debt'
+import Profile from './pages/Profile/Profile'
 
 //css
 import './styles/fonts.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './index.css'
-import Debt from './pages/Debt/Debt'
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,12 @@ const router = createBrowserRouter([
   {
     path : "/debt",
     element : <Debt />
+  },
+  {
+    path : "/profile",
+    element : <Profile />
   }
+  
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
