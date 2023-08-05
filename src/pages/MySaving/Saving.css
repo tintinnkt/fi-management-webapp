@@ -4,21 +4,6 @@ body {
     font-family: 'Lilita One', cursive;
 }
  
-.Title {
-
-    font-family: 'Lilita One', cursive;
-    font-size: 36px;
-    background-image: linear-gradient(to left, #ffe57c, #ffb300);
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 2px solid black;
-} 
-
 .row {
     display: flex;
     flex-wrap: wrap;

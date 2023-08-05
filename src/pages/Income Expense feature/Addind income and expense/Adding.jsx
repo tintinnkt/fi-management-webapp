@@ -6,7 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css'
 //component
 import Topic from '../../../components/topic/topic'
 import NavigationBar from '../../../components/navbar/nav'
-import AddSelectorDropdown from '../../../components/AddSelector'
+import AddSelector from '../../../components/selector/AddSelector'
 
 function Adding() {
     const [date, setDate] = useState(new Date());
@@ -18,7 +18,7 @@ function Adding() {
                 <div className={styles.Howmuch}>How much ?</div>
                 <input className={styles.money} type="number" placeholder='Amount' />
                 <div className={styles.dropdown}>
-                    <AddSelectorDropdown />
+                    <AddSelector />
                 </div>
 
                 <div className={styles.Date}>
@@ -28,6 +28,7 @@ function Adding() {
             </div>
 
             <button className={styles.rec}>Record</button>
+            <div className="space"></div>
             <NavigationBar />
         </>
     )
