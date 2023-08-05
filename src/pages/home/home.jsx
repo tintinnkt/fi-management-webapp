@@ -6,7 +6,7 @@ import NavigationBar from '../../components/navbar/nav'
 const Home = () => {
   return (
     <>
-    
+
       <div className="Title">
         <a href=""><i className="bi bi-bell-fill"></i></a>
         <div className="totalbalance-value">XXXX</div>
@@ -15,7 +15,32 @@ const Home = () => {
       </div>
       <div className="spending-rec">Spending Record</div>
       <div className="spending-detail">Spending Detail</div>
-      
+
+      <div className="Topexpense1">
+
+        <div className="type">food & drinks</div>
+        <div className="amount">xxxx</div>
+        <div className="percent">XX%</div>
+      </div>
+
+      <div className="Topexpense2">
+
+        <div className="type">Transportation</div>
+        <div className="amount">xxxx</div>
+        <div className="percent">XX%</div>
+      </div>
+      <div className="Topexpense2">
+
+        <div className="type">Electricity</div>
+        <div className="amount">xxxx</div>
+        <div className="percent">XX%</div>
+      </div>
+      <div className="Topexpense2">
+
+        <div className="type">Phone & Internet</div>
+        <div className="amount">xxxx</div>
+        <div className="percent">XX%</div>
+      </div>
       <NavigationBar />
     </>
   );
