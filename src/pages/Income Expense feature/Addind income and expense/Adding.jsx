@@ -28,6 +28,7 @@ function Adding() {
             </div>
 
             <button className={styles.rec}>Record</button>
+            <div className="space"></div>
             <NavigationBar />
         </>
     )
