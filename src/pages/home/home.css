@@ -10,6 +10,7 @@ body {
     position: absolute;
    left: 40px;
    top: 23px;
+   color: black;
 }
 
 .totalbalance {
@@ -17,6 +18,7 @@ body {
     left: 40px;
     top: 55px;
     font-size: 20px;
+    color: black;
 
 }
 
@@ -35,12 +37,30 @@ body {
     top: 28px;
     left: 140px;
     font-size: 25px;
+    color: black;
 }
 
-.spending-record {
+.spending-rec {
 
 font-size: 27px;
-margin-top: 20px;
-margin-left: 20px;
+color: black;
+position: relative;
+top: 115px;
+left: 20px;
 
+}
+
+.spending-detail {
+
+    font-size: 27px;
+    color: black;
+    position: relative;
+    top: 315px;
+    left: 20px;
+    
+    }
+
+.Title {
+
+    height: 100px;
 }
