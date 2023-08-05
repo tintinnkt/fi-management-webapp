@@ -1,11 +1,11 @@
-import NavigationBar from '../../components/navbar/nav'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import React from 'react';
 import styles from './Profile.module.css'; // Import the CSS module with styles object
 
-// ...
+//component
+import NavigationBar from '../../components/navbar/nav'
 
-const ProfileComponent = () => {
+const ProfileC = () => {
   return (
     <>
     <div className={styles.container}>
@@ -26,4 +26,4 @@ const ProfileComponent = () => {
   );
 };
 
-export default ProfileComponent;
+export default ProfileC;

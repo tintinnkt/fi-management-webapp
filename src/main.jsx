@@ -8,7 +8,7 @@ import Saving from './pages/MySaving/Saving'
 import App from './App'
 import Adding from './pages/Income Expense feature/Addind income and expense/Adding'
 import Debt from './pages/Debt/Debt'
-import Profile from './pages/Profile/Profile'
+import ProfileC from './pages/Profile/Profile'
 import Home from './pages/home/home'
 import History from './pages/Income Expense feature/history/History'
 
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
   },
   {
     path : "/profile",
-    element : <Profile />
+    element : <ProfileC />
   },
   {
     path : "/history",

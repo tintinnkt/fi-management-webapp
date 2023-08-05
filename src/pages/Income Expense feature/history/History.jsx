@@ -6,6 +6,7 @@ import './history.css'
 import Topic from '../../../components/topic/topic';
 import NavigationBar from '../../../components/navbar/nav';
 import HistoryCard from '../../../components/card/HistoryCard'
+import Returnbtn from '../../../components/returnBtn/returnbtn';
 
 function History() {
     const [filteredData, setFilteredData] = useState(data.filter((rec) => rec.userID === 123));
@@ -14,6 +15,7 @@ function History() {
     return (
         <React.Fragment>
             <Topic text="History" />
+            <Returnbtn url='/profile'/>
             <div className="container">
                 <p>heeeeello</p>
                 {filteredData.map((rec) => (
