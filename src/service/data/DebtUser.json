@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "userid": 102,
+      "userID": 102,
       "name": "Credit Card",
       "type" : 0,
       "total": 5000,
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "userid": 102,
+      "userID": 101,
       "name": "Student Loan",
       "type" : 0,
       "total": 15000,
@@ -19,7 +19,7 @@
     },
     {
       "id": 3,
-      "userid": 101,
+      "userID": 101,
       "name": "Personal Loan",
       "type" : 0,
       "total": 10000,
@@ -28,7 +28,7 @@
     },
     {
       "id": 4,
-      "userid": 102,
+      "userID": 102,
       "name": "Mortgage",
       "type" : 1,
       "total": 80000,
@@ -37,7 +37,7 @@
     },
     {
       "id": 5,
-      "userid": 102,
+      "userID": 102,
       "name": "Car Loan",
       "type" : 0,
       "total": 20000,

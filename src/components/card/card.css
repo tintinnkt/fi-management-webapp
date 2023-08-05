@@ -1,16 +1,16 @@
 .savecard {
-  
+
     width: 45%;
     margin: 5px;
     text-align: center;
     font-size: 16px;
 
-    padding-bottom: 15px;
+    padding-bottom: 20px;
 }
 
 
 .img {
-    padding-top: 10px;
+    padding-top: 20px;
     width: 45%;
     height: 45%;
 }
@@ -35,7 +35,8 @@
     font-size: 14px;
     margin-top: 2px;
 }
-span{
+
+span {
     color: #5222AF;
     font-size: 17px;
 }
