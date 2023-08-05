@@ -9,6 +9,7 @@ import App from './App'
 import Adding from './pages/Income Expense feature/Addind income and expense/Adding'
 import Debt from './pages/Debt/Debt'
 import Profile from './pages/Profile/Profile'
+import Home from './pages/home/home'
 
 //css
 import './styles/fonts.css'
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path : "/",
-    element : <App />
+    element : <Home />
   },
   {
     path : "/create",

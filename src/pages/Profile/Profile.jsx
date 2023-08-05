@@ -7,6 +7,7 @@ import styles from './Profile.module.css'; // Import the CSS module with styles 
 
 const ProfileComponent = () => {
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.profile}>
         <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
@@ -19,8 +20,9 @@ const ProfileComponent = () => {
       <div className={styles.line}></div>
       <div className={styles.Report}></div>
       <button className={styles.logout}>Log out</button>
-      <NavigationBar />
     </div>
+      <NavigationBar />
+    </>
   );
 };
 

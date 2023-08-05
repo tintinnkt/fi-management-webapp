@@ -11,14 +11,14 @@ function Debt() {
 
   const handleEdit = (id, updatedData) => {
     const index = filteredData.findIndex((debt) => debt.id === id);
-  
+
     if (index !== -1) {
       const newData = [...filteredData];
       newData[index] = { ...newData[index], ...updatedData };
       setFilteredData(newData);
     }
   };
-  
+
 
   const handleCreate = (newDebt) => {
     setFilteredData((prevData) => [...prevData, newDebt]);
@@ -33,10 +33,10 @@ function Debt() {
         {filteredData.map((debt) => (
           <DebtCard key={debt.id} prop={debt} onEdit={handleEdit} />
         ))}
-      <NewDebtForm onCreate={handleCreate} /> 
+        <NewDebtForm onCreate={handleCreate} />
       </div>
 
-      
+
       <NavigationBar />
     </>
   );

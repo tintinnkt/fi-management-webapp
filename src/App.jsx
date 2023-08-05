@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Topic text="HOME" />
+      <Topic text="App" />
       <NavigationBar />
     </>
   )

@@ -3,7 +3,6 @@
       "id": 1,
       "userID": 102,
       "name": "Credit Card",
-      "type" : 0,
       "total": 5000,
       "deadline": "2023-09-15",
       "arrear": 1500
@@ -12,7 +11,6 @@
       "id": 2,
       "userID": 101,
       "name": "Student Loan",
-      "type" : 0,
       "total": 15000,
       "deadline": "2024-05-01",
       "arrear": 3000
@@ -21,7 +19,6 @@
       "id": 3,
       "userID": 101,
       "name": "Personal Loan",
-      "type" : 0,
       "total": 10000,
       "deadline": "2023-12-10",
       "arrear": 750
@@ -30,7 +27,6 @@
       "id": 4,
       "userID": 102,
       "name": "Mortgage",
-      "type" : 1,
       "total": 80000,
       "deadline": "2040-01-01",
       "arrear": 5000
@@ -39,7 +35,6 @@
       "id": 5,
       "userID": 102,
       "name": "Car Loan",
-      "type" : 0,
       "total": 20000,
       "deadline": "2025-08-20",
       "arrear": 1200
