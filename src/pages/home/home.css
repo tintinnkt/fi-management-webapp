@@ -8,15 +8,15 @@ body {
     font-size: 32px;
     letter-spacing: 2px;
     position: absolute;
-   left: 40px;
-   top: 23px;
+   left: 20px;
+   top: 18px;
    color: black;
 }
 
 .totalbalance {
     position: absolute;
-    left: 40px;
-    top: 55px;
+    left: 20px;
+    top: 50px;
     font-size: 20px;
     color: black;
 
@@ -26,7 +26,7 @@ body {
 
     position: absolute;
     right:20px;
-    top: 28px;
+    top: 23px;
     font-size: 20px;
     color: black;
 }
@@ -34,8 +34,8 @@ body {
 .bi-emoji-smile {
 
     position: absolute;
-    top: 28px;
-    left: 140px;
+    top: 23px;
+    left: 120px;
     font-size: 25px;
     color: black;
 }
