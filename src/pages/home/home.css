@@ -16,7 +16,7 @@ body {
 .totalbalance {
     position: absolute;
     left: 20px;
-    top: 50px;
+    top: 55px;
     font-size: 20px;
     color: black;
 
@@ -40,6 +40,20 @@ body {
     color: black;
 }
 
+.bi-clock-history {
+    
+    position: absolute;
+    top: 480px;
+    right: 4%;
+    font-size: 20px;
+    color: black;
+
+}
+
+a{
+    cursor: pointer;
+}
+
 .spending-rec {
 
 font-size: 27px;
@@ -55,7 +69,7 @@ left: 20px;
     font-size: 27px;
     color: black;
     position: relative;
-    top: 315px;
+    top: 330px;
     left: 20px;
     
     }

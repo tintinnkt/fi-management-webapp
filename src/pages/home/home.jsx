@@ -14,6 +14,7 @@ const Home = () => {
         <i className="bi bi-emoji-smile"></i>
       </div>
       <div className="spending-rec">Spending Record</div>
+      <a href=""><i className="bi bi-clock-history"></i></a>
       <div className="spending-detail">Spending Detail</div>
 
       <div className="Topexpense1">
