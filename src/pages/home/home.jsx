@@ -13,10 +13,8 @@ const Home = () => {
         <div className="totalbalance">Total Balance</div>
         <i className="bi bi-emoji-smile"></i>
       </div>
-      <div className="spending-rec">
-
-      </div>
-      <div className="spending-detail"></div>
+      <div className="spending-rec">Spending Record</div>
+      <div className="spending-detail">Spending Detail</div>
       
       <NavigationBar />
     </>
