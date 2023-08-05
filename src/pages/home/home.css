@@ -93,7 +93,7 @@ left: 20px;
     font-size: 32px;
     letter-spacing: 1.5px;
     position: absolute;
-    left: 310px;
+    left: 78%;
     top : 4px
     
 }
@@ -102,8 +102,8 @@ left: 20px;
     font-size: 20px;
     letter-spacing: 1.5px;
     position: absolute;
-    left: 15px;
-    top: 7px;
+    left: 5%;
+    top: 8%;
 }
 
 
@@ -113,5 +113,5 @@ left: 20px;
     letter-spacing: 1px;
     position: absolute;
     top: 32px;
-    left: 15px;
+    left: 5%;
 }
