@@ -10,6 +10,7 @@ import Adding from './pages/Income Expense feature/Addind income and expense/Add
 import Debt from './pages/Debt/Debt'
 import Profile from './pages/Profile/Profile'
 import Home from './pages/home/home'
+import History from './pages/Income Expense feature/history/History'
 
 //css
 import './styles/fonts.css'
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path : "/profile",
     element : <Profile />
+  },
+  {
+    path : "/history",
+    element : <History />
   }
   
 ])

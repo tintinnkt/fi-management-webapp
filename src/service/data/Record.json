@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "userID": "user123",
+        "userID": 123,
         "amount": 50.00,
         "type": "need",
         "name": "Food & drinks",
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "userID": "user123",
+        "userID": 123,
         "amount": 25.00,
         "type": "need",
         "name": "Transportation",
@@ -17,7 +17,7 @@
     },
     {
         "id": 3,
-        "userID": "user123",
+        "userID": 123,
         "amount": 80.00,
         "type": "need",
         "name": "Electricity & water",
@@ -25,7 +25,7 @@
     },
     {
         "id": 4,
-        "userID": "user123",
+        "userID": 123,
         "amount": 40.00,
         "type": "need",
         "name": "Phone & internet",
@@ -33,7 +33,7 @@
     },
     {
         "id": 5,
-        "userID": "user123",
+        "userID": 123,
         "amount": 500.00,
         "type": "need",
         "name": "Housing",
@@ -41,7 +41,7 @@
     },
     {
         "id": 6,
-        "userID": "user123",
+        "userID": 123,
         "amount": 100.00,
         "type": "want",
         "name": "Shopping",
@@ -49,7 +49,7 @@
     },
     {
         "id": 7,
-        "userID": "user123",
+        "userID": 123,
         "amount": 30.00,
         "type": "want",
         "name": "Hobby",
@@ -57,7 +57,7 @@
     },
     {
         "id": 8,
-        "userID": "user123",
+        "userID": 123,
         "amount": 40.00,
         "type": "want",
         "name": "Hangout",
@@ -65,7 +65,7 @@
     },
     {
         "id": 9,
-        "userID": "user123",
+        "userID": 123,
         "amount": 200.00,
         "type": "want",
         "name": "Travelling",
@@ -73,7 +73,7 @@
     },
     {
         "id": 10,
-        "userID": "user123",
+        "userID": 123,
         "amount": 50.00,
         "type": "want",
         "name": "Activity",
@@ -81,7 +81,7 @@
     },
     {
         "id": 11,
-        "userID": "user123",
+        "userID": 123,
         "amount": 10.00,
         "type": "want",
         "name": "Collection",
@@ -89,7 +89,7 @@
     },
     {
         "id": 12,
-        "userID": "user123",
+        "userID": 123,
         "amount": 2000.00,
         "type": "income",
         "name": "Salary",
@@ -97,7 +97,7 @@
     },
     {
         "id": 13,
-        "userID": "user123",
+        "userID": 123,
         "amount": 150.00,
         "type": "income",
         "name": "Earning",
@@ -105,7 +105,7 @@
     },
     {
         "id": 14,
-        "userID": "user123",
+        "userID": 123,
         "amount": 100.00,
         "type": "income",
         "name": "Payee",
@@ -113,7 +113,7 @@
     },
     {
         "id": 15,
-        "userID": "user123",
+        "userID": 123,
         "amount": 75.00,
         "type": "need",
         "name": "Medicine",
@@ -121,7 +121,7 @@
     },
     {
         "id": 16,
-        "userID": "user123",
+        "userID": 123,
         "amount": 15.00,
         "type": "need",
         "name": "Clothing",
@@ -129,7 +129,7 @@
     },
     {
         "id": 17,
-        "userID": "user123",
+        "userID": 123,
         "amount": 200.00,
         "type": "need",
         "name": "Housing",
@@ -137,7 +137,7 @@
     },
     {
         "id": 18,
-        "userID": "user123",
+        "userID": 123,
         "amount": 50.00,
         "type": "want",
         "name": "Entertainment",
@@ -145,7 +145,7 @@
     },
     {
         "id": 19,
-        "userID": "user123",
+        "userID": 123,
         "amount": 30.00,
         "type": "want",
         "name": "Entertainment'",
@@ -153,7 +153,7 @@
     },
     {
         "id": 20,
-        "userID": "user123",
+        "userID": 123,
         "amount": 150.00,
         "type": "income",
         "name": "Payee",
@@ -161,7 +161,7 @@
     },
     {
         "id": 21,
-        "userID": "user123",
+        "userID": 123,
         "amount": 500.00,
         "type": "income",
         "name": "Bonus",
@@ -169,7 +169,7 @@
     },
     {
         "id": 22,
-        "userID": "user123",
+        "userID": 123,
         "amount": 80.00,
         "type": "income",
         "name": "Side Gig",
@@ -177,7 +177,7 @@
     },
     {
         "id": 23,
-        "userID": "user123",
+        "userID": 123,
         "amount": 20.00,
         "type": "income",
         "name": "Refund",
