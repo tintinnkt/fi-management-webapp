@@ -4,22 +4,6 @@ body {
     font-family: 'Lilita One', cursive;
 }
 
-.Title {
-
-    font-family: 'Lilita One', cursive;
-    background-image: linear-gradient(to left, #ffe57c, #ffb300);
-    width: 100%;
-    position: relative;
-    top: -10px;
-    left: -10px;
-    text-align: center;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid black;
-    height: 70px;
-}
 
 
 .totalbalance-value {

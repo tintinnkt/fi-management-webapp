@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import './nav.css';
 
 const NavigationBar = () => {
+  const navItem =[
+    {
+      Name : "Home",
+      
+    }
+  ]
   return (
     <nav className="bottom-navigation">
       <Link to="/" className="nav-item">
