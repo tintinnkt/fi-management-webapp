@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import './Adding.css'
 import DatePicker from "react-datepicker";
+import styles from './Adding.module.css'
 import 'react-datepicker/dist/react-datepicker.css'
 
 //component
@@ -13,21 +13,21 @@ function Adding() {
     return (
         <>
             <Topic text="Add Income & Expense" />
-            <div className="container">
+            <div className={styles.container}>
 
-                <div className="Howmuch">How much ?</div>
-                <input className="money" type="number" placeholder='Amount' />
-                <div className="dropdown">
+                <div className={styles.Howmuch}>How much ?</div>
+                <input className={styles.money} type="number" placeholder='Amount' />
+                <div className={styles.dropdown}>
                     <AddSelectorDropdown />
                 </div>
 
-                <div className="Date">
-                    <DatePicker selected={date} onChange={(date) => setDate(date)} />
+                <div className={styles.Date}>
+                    <DatePicker className={styles.calender} selected={date} onChange={(date) => setDate(date)} />
                 </div>
-                <div className="calender"></div>
+               
             </div>
 
-            <button className="rec-btn">Record</button>
+            <button className={styles.rec}>Record</button>
             <NavigationBar />
         </>
     )

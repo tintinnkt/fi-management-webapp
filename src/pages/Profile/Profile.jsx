@@ -1,23 +1,27 @@
+import NavigationBar from '../../components/navbar/nav'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import React from 'react';
-import './Profile.module.css';
+import styles from './Profile.module.css'; // Import the CSS module with styles object
 
-import NavigationBar from '../../components/navbar/nav' 
-const Profile = () => {
+// ...
+
+const ProfileComponent = () => {
   return (
-    <>
-    <div className="container">
-      <div className="profile"><i className="bi bi-person-circle"></i></div>
-      <div className="Name">Name</div>
-      <div className="Income">Income: xxxx</div>
-      <div className="Expense">Expense: xxxx</div>
-      <div className="Net">Net: xxxx</div>
-      <div className="line"></div>
-      <div className="Report"></div>
-      <button className="logout">Log out</button>
+    <div className={styles.container}>
+      <div className={styles.profile}>
+        <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
+      </div>
+
+      <div className={styles.Name}>Name</div>
+      <div className={styles.Income}>Income: xxxx</div>
+      <div className={styles.Expense}>Expense: xxxx</div>
+      <div className={styles.Net}>Net: xxxx</div>
+      <div className={styles.line}></div>
+      <div className={styles.Report}></div>
+      <button className={styles.logout}>Log out</button>
+      <NavigationBar />
     </div>
-    <NavigationBar />
-    </>
   );
 };
 
-export default Profile;
+export default ProfileComponent;

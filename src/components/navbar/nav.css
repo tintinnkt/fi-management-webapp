@@ -37,7 +37,7 @@
 .nav-item2 {
 
   text-decoration: none;
-  color: black; 
+  color: rgb(0, 0, 0); 
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -63,6 +63,8 @@
   font-size:50px;
   color: #FFFFE8; 
   line-height: 48px; 
+  position: absolute;
+  top: -2px;
 }
 
 
