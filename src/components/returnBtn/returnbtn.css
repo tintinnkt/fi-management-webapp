@@ -1,13 +1,16 @@
 .re-btn{
-    padding-top: 5px;
+    padding-top: 35px;
     width: 15px;
     height: 15px;
     padding-bottom: 5px;
     justify-content: center;
+    position: relative;
+    padding-left: 10px;
 }
 .re-img{
-    position: relative;
+    position: absolute;
+    padding-top: 37px;
+    
     justify-content: center;
-    width: 10%;
-    margin: 5px;
+    width: 40px;
 }

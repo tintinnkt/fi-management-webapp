@@ -1,6 +1,31 @@
 .card-history {
     padding-top: 20px;
     padding-bottom: 5px;
-    border-bottom: 2px solid black;
+    padding-left: 15px;
+    border-bottom: 1px solid #494949;
     color: #34345c;
+    position: relative;
+    height: 85px;
+
+}
+
+.💩 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.name {
+    font-size: 20px;
+
+}
+
+.amount {
+    width: 85%;
+    font-size: 25px;
+    text-align: end;
+
+}
+
+.date {
+    font-size: 13px;
 }

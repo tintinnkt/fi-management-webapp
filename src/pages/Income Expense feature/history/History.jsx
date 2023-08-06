@@ -10,19 +10,26 @@ import Returnbtn from '../../../components/returnBtn/returnbtn';
 
 function History() {
     const [filteredData, setFilteredData] = useState(data.filter((rec) => rec.userID === 123));
-    filteredData.sort((a, b) => new Date(a.date) - new Date(b.date));
-
+    filteredData.sort((b, a) => new Date(a.date) - new Date(b.date));
+    const bgColor = ['#f77c4c', '#ecff99', '#85ffa3'];
     return (
         <React.Fragment>
-            <Topic text="History" />
-            <Returnbtn url='/profile'/>
-            <div className="container">
-                <p>heeeeello</p>
+            <div className="header">
+                <Topic text="History" />
+                <Returnbtn url='/profile' />
+            </div>
+            <div className="guild">
+                <div className="g-box" style={{ backgroundColor: bgColor[2] }}>Income</div>
+                <div className="g-box" style={{ backgroundColor: bgColor[1] }}>Want Expense</div>
+                <div className="g-box" style={{ backgroundColor: bgColor[0] }}>Need Expense</div>
+
+            </div>
+            <div className="his-container">
                 {filteredData.map((rec) => (
-                    <HistoryCard prop={rec}/>
+                    <HistoryCard prop={rec} />
                 ))}
             </div>
-            <NavigationBar />
+            {/* <NavigationBar /> */}
         </React.Fragment>
     );
 }
