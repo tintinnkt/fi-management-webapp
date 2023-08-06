@@ -3,12 +3,12 @@
     display: flex;
     width: 100%;
     padding-left: 10px;
-    background-image: linear-gradient(to right, #85ffa3,#ecff99, #f77c4c);
+    background-color: white;
     border-bottom: 2px solid #494949;
 }
 
 .g-box {
-    color: #426358;
+    color: #000000;
     max-width: 300px;
     padding-top: 20px;
     text-align: center;

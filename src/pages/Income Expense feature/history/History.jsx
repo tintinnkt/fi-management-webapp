@@ -11,7 +11,7 @@ import Returnbtn from '../../../components/returnBtn/returnbtn';
 function History() {
     const [filteredData, setFilteredData] = useState(data.filter((rec) => rec.userID === 123));
     filteredData.sort((b, a) => new Date(a.date) - new Date(b.date));
-    const bgColor = ['#f77c4c', '#ecff99', '#85ffa3'];
+    const bgColor = ['#FA5555', '#F7F48B', '#A2EF44'];
     return (
         <React.Fragment>
             <div className="header">

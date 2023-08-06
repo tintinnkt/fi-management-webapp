@@ -5,11 +5,11 @@ import './HistoryCard.css';
 function HistoryCard({ prop }) {
   let bgColor;
   if (prop.type === 'need') {
-    bgColor = '#f77c4c';
+    bgColor = '#FA5555';
   } else if (prop.type === 'want') {
-    bgColor = '#ecff99';
+    bgColor = '#F7F48B';
   } else if (prop.type === 'income') {
-    bgColor = '#85ffa3';
+    bgColor = '#A2EF44';
   }
 
   return (
