@@ -22,7 +22,7 @@ function Adding() {
                 </div>
 
                 <div className={styles.Date}>
-                    <DatePicker className={styles.calender} selected={date} onChange={(date) => setDate(date)} />
+                    <DatePicker className={styles.calender} selected={date} onChange={(date) => setDate(date)} style={{ fontSize: '10px' }} />
                 </div>
                
             </div>

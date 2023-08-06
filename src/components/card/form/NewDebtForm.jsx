@@ -54,7 +54,7 @@ function NewDebtForm({ onCreate }) {
             Arrear:
             <input type="number" value={arrear} onChange={(e) => setArrear(e.target.value)} required />
           </label>
-          <button type="submit">Add Debt</button>
+          <button id="form1"type="submit">Add Debt</button>
         </form>
         </div>
       )}

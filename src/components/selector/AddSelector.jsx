@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import './selector.css'
 
-function AddSelectorDropdown() {
+function AddSelector() {
     const selector = [
         { id: 1, type: 'need', text: 'Food & drinks' },
         { id: 2, type: 'need', text: 'Transportation' },
@@ -55,4 +56,4 @@ function AddSelectorDropdown() {
     );
 }
 
-export default AddSelectorDropdown;
+export default AddSelector;

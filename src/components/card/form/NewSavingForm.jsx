@@ -44,7 +44,7 @@ function SavingForm({ onSave }) {
                         Current:
                         <input type="number" value={current} onChange={(e) => setCurrent(e.target.value)} required />
                     </label>
-                    <button type="submit">Add Saving</button>
+                    <button id="form1"type="submit">Add Saving</button>
                 </form>
             </div>
                 )}
