@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css'; // Import the CSS file if using this JSX in a React component
 
 import NavigationBar from '../../components/navbar/nav'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -14,8 +15,10 @@ const Home = () => {
         <i className="bi bi-emoji-smile"></i>
       </div>
       <div className="spending-rec">Spending Record</div>
-      <a href=""><i className="bi bi-clock-history"></i></a>
-      <div className="spending-detail">Spending Detail</div>
+      
+      <div className="spending-detail">Spending Detail
+      <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={()=>{}}/></Link>
+      </div>
 
       <div className="Topexpense1">
 

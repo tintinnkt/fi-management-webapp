@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+
+
 body {
 
     font-family: 'Lilita One', cursive;
 }
+
 .totalbalance-value {
 
     font-size: 32px;
     letter-spacing: 2px;
     position: absolute;
-   left: 20px;
-   top: 18px;
-   color: black;
+    left: 20px;
+    top: 18px;
+    color: black;
 }
 
 .totalbalance {
@@ -25,7 +27,7 @@ body {
 .bi-bell-fill {
 
     position: absolute;
-    right:20px;
+    right: 20px;
     top: 23px;
     font-size: 20px;
     color: black;
@@ -41,7 +43,7 @@ body {
 }
 
 .bi-clock-history {
-    
+
     position: absolute;
     top: 480px;
     right: 4%;
@@ -50,17 +52,17 @@ body {
 
 }
 
-a{
+a {
     cursor: pointer;
 }
 
 .spending-rec {
 
-font-size: 27px;
-color: black;
-position: relative;
-top: 20px;
-left: 20px;
+    font-size: 27px;
+    color: black;
+    position: relative;
+    top: 20px;
+    left: 20px;
 
 }
 
@@ -70,36 +72,41 @@ left: 20px;
     color: black;
     position: relative;
     top: 330px;
-    left: 20px;
-    
-    }
+    padding-left: 20px;
+
+}
+
+.his-img {
+    position: absolute;
+    justify-content: end;
+    right: 10px;
+    width: 35px;
+}
+
 
 .Title {
 
     height: 100px;
     background-image: linear-gradient(to left, #ffe57c, #ffb300);
+    border: 2px solid black;
 }
 
-.Topexpense1{
+.Topexpense1 {
     border: 2px solid black;
     width: 100%;
     height: 60px;
     position: relative;
     top: 335px;
-    display:flex
-    
-    
+    display: flex
 }
 
-.Topexpense2{
-    border-bottom: 2px solid black ;
+.Topexpense2 {
+    border-bottom: 2px solid black;
     width: 100%;
     height: 60px;
     position: relative;
     top: 335px;
-    display:flex
-    
-    
+    display: flex
 }
 
 .percent {
@@ -108,8 +115,7 @@ left: 20px;
     letter-spacing: 1.5px;
     position: absolute;
     left: 78%;
-    top : 4px
-    
+    top: 4px
 }
 
 .type {
@@ -128,5 +134,4 @@ left: 20px;
     position: absolute;
     top: 32px;
     left: 5%;
-    
 }
