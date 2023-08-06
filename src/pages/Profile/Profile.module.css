@@ -26,9 +26,9 @@ body {
     height: 50px;
     font-family: 'Lilita One', cursive;
     font-size: 34px;
-    position: relative;
+    position: absolute;
     left: 107px;
-    top: 480px;
+    top: 600px;
 
 }
 
@@ -55,6 +55,15 @@ body {
 }
 .bar{
     padding-inline: 25px;
+}
+
+.Expense {
+
+    font-size: 18.92px;
+    position: absolute;
+    top: 165px;
+    left: 50%;
+
 }
 .pie {
     margin-top: 20px;
