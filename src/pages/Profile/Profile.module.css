@@ -1,4 +1,3 @@
-
 body {
 
     font-family: 'Lilita One', cursive;
@@ -7,21 +6,23 @@ body {
 
 .container {
 
-    width: 350.55px;
+    width: 85%;
     height: 700px;
     border: 1px solid black;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     border-radius: 10px;
     position: relative;
     top: 30px;
-    left: 7%;
+    padding-left: 10px;
 
 }
+
 .logout {
 
     background-color: #F6D06B;
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid rgb(82, 82, 82);
+    box-shadow: 3px 2px #50505065;
     width: 127px;
     height: 50px;
     font-family: 'Lilita One', cursive;
@@ -47,15 +48,14 @@ body {
     position: relative;
     left: 40.25%;
     top: 30px
-
 }
-
-.Income{
-
-    font-size:  18.92px;
-    position: absolute;
-    top: 165px;
-    left:15%;
+.Income, .Expense, .Net {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+.bar{
+    padding-inline: 25px;
 }
 
 .Expense {
@@ -66,12 +66,14 @@ body {
     left: 50%;
 
 }
-
-.Net {
-
-    font-size: 21px;
+.pie {
     position: absolute;
-    top: 200px;
-    left: 37.5%;
+    margin-top: 20px;
+    width: 80%;
 }
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
 
+    }
+}
