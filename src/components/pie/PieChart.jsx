@@ -39,7 +39,9 @@ function PieChart({ data }) {
     const otherPercentage = (otherTotal / totalAmount) * 100;
     chartData.push(['Other', otherPercentage]);
   }
-
+  const customStyles ={
+    backgroundColor: "#ffffff00"
+  }
   return (
     <Chart
       width={'500px'}
@@ -51,6 +53,7 @@ function PieChart({ data }) {
         title: 'Expense Type Ratio',
       }}
       rootProps={{ 'data-testid': '1' }}
+      style={customStyles}
     />
   );
 }

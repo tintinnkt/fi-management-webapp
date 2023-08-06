@@ -39,7 +39,7 @@ const ProfileC = () => {
           <div className={styles.Net}>Net: {totalIncome - (totalWant + totalNeed)}</div>
           <div className={styles.bar}>
             <ProgressBar >
-              <ProgressBar label={`Net ${((totalIncome - totalWant + totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant + totalNeed) / totalIncome * 100} key={1} />
+              <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
               <ProgressBar label="Want" variant="warning" now={totalWant / totalIncome * 100} key={2} />
               <ProgressBar label="Need" variant="danger" now={totalNeed / totalIncome * 100} key={3} />
             </ProgressBar>
@@ -49,7 +49,7 @@ const ProfileC = () => {
         </div>
         <button className={styles.logout}>Log out</button>
         <div className={styles.pie}>
-          <PieChart data={wantAndNeedData} />
+          <PieChart data={wantAndNeedData}/>
         </div>
       </div>
       <NavigationBar />
