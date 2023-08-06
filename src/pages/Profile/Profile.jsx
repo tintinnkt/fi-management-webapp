@@ -21,7 +21,7 @@ const ProfileC = () => {
       <div className={styles.Report}></div>
       <button className={styles.logout}>Log out</button>
     </div>
-      <NavigationBar />
+    <NavigationBar />
     </>
   );
 };

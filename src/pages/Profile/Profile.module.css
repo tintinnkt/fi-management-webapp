@@ -26,9 +26,9 @@ body {
     height: 50px;
     font-family: 'Lilita One', cursive;
     font-size: 34px;
-    position: relative;
+    position: absolute;
     left: 107px;
-    top: 480px;
+    top: 600px;
 
 }
 
@@ -62,7 +62,6 @@ body {
 
     font-size: 18.92px;
     position: absolute;
-    top: 500px;
     top: 165px;
     left: 50%;
 
