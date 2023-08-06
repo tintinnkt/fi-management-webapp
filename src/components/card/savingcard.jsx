@@ -8,7 +8,7 @@ function Savingcard({ prop }) {
 
   return (
     <div className="savecard">
-      <img className="img" src={piggyUrl} />
+      <img className="img-pig" src={piggyUrl} />
       <div className="Name">{prop.name}</div>
       <div className="perc">
         <div className="bar"><ProgressBar now={percent} label={`${percent}%`} /></div>

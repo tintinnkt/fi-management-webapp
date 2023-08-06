@@ -1,47 +1,84 @@
 .savecard {
-
+    position: relative;
+    top: -25px;
     width: 45%;
     margin: 5px;
     text-align: center;
     font-size: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     position: relative;
+    color: black;
 }
 
 
-.img {
-    padding-top: 10px;
+.img-pig {
+   
+    width: 45%;
+    height: 45%;
+    
+}
+
+.img-debt {
+   
     width: 40%;
     height: 40%;
+    
 }
 
 .Name {
-    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    color: black;
 }
 
 
 .Recent {
     font-size: 14px;
-    text-align: left;
+    text-align: center;
+    color: black;
 }
 
 .perc {
     display: flex;
     flex-wrap: wrap;
+    color: black;
 }
 
 .bar {
     padding-top: 5px;
     width: 65%;
+    color: black;
 }
 
 .p-label {
     padding-left: 10px;
     text-align: end;
     font-size: 16px;
+    color: black;
 }
 
 .Goal {
-    text-align: left;
+    text-align: center;
+    color: black;
 }
 
+.Total {
+    position: relative;
+    top: -7px;
+    color: black;
+}
+
+.Deadline {
+
+    position: relative;
+    top: -10px;
+    color: black;
+}
+
+.Arrear {
+
+    color: black;
+    position: relative;
+    top: -13px;
+
+}
