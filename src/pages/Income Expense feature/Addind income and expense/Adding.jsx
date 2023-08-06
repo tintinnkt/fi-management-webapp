@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import dt from '../../../service/data/Record.json'
 //component
 import Topic from '../../../components/topic/topic';
-import NavigationBar from '../../../components/navbar/nav';
+import Returnbtn from '../../../components/returnBtn/returnbtn';
 import AddSelector from '../../../components/selector/AddSelector';
 
 function Adding() {
@@ -40,6 +40,7 @@ function Adding() {
     return (
         <>
             <Topic text="Add Income & Expense" />
+            <Returnbtn url="/"/>
             <div className={styles.container}>
                 <div className={styles.Howmuch}>How much ?</div>
                 <input className={styles.money} type="number" placeholder="Amount" />
@@ -60,7 +61,6 @@ function Adding() {
 
             <button className={styles.rec} onClick={handleRecord}>Record</button>
             <div className="space"></div>
-            <NavigationBar />
         </>
     );
 }
