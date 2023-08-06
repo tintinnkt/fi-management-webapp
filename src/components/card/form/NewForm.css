@@ -1,10 +1,12 @@
 .form {
-    background-color: #ffffff;
-    border: 1px solid #e0e0e0;
+    background-color: #ffebb5;
+    border: 1px solid #7a7a7a;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 4.5px #7a7a7a62;
     margin-top: 20px;
+    justify-content: left;
+    position: relative;
   }
   
   .form h2 {
@@ -18,19 +20,21 @@
   }
   
   .form input {
-    width: 100%;
+    width: 70%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #b1aca300;
     border-radius: 3px;
   }
   
-  .form button {
-    background-color: #007bff;
-    color: #ffffff;
+  form button#form1{
+    background-color: #c3ffa0;
+    color: #005c17;
+    font-size: 18px;
     border: none;
     border-radius: 3px;
-    padding: 10px 20px;
+    padding: 10px 10px;
     cursor: pointer;
+    box-shadow: 3px 4.5px #7a7a7a62;
   }
   .plus-icon{
     padding-top: 45px;

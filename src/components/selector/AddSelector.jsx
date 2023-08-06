@@ -1,39 +1,44 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
+import './selector.css'
 
-function AddSelectorDropdown() {
+function AddSelector({ onSelect }) {
     const selector = [
-        { id: 1, type: 'need', text: 'Food & drinks' },
-        { id: 2, type: 'need', text: 'Transportation' },
-        { id: 3, type: 'need', text: 'Electricity & water' },
-        { id: 4, type: 'need', text: 'Phone & internet' },
-        { id: 5, type: 'need', text: 'Housing' },
-        { id: 6, type: 'want', text: 'Shopping' },
-        { id: 7, type: 'want', text: 'Hobby' },
-        { id: 8, type: 'want', text: 'Hangout' },
-        { id: 9, type: 'want', text: 'Travelling' },
-        { id: 10, type: 'want', text: 'Activity' },
-        { id: 11, type: 'want', text: 'Collection' },
-        { id: 12, type: 'income', text: 'Salary' },
-        { id: 13, type: 'income', text: 'Earning' },
-        { id: 14, type: 'income', text: 'Payee' },
-        { id: 15, type: 'need', text: 'Medical' },
-        { id: 16, type: 'income', text: 'Refund' },
-        { id: 17, type: 'want', text: 'Entertainment' },
+        { id: 1, type: 'need', label: 'Food & drinks' },
+        { id: 2, type: 'need', label: 'Transportation' },
+        { id: 3, type: 'need', label: 'Electricity & water' },
+        { id: 4, type: 'need', label: 'Phone & internet' },
+        { id: 5, type: 'need', label: 'Housing' },
+        { id: 6, type: 'want', label: 'Shopping' },
+        { id: 7, type: 'want', label: 'Hobby' },
+        { id: 8, type: 'want', label: 'Hangout' },
+        { id: 9, type: 'want', label: 'Travelling' },
+        { id: 10, type: 'want', label: 'Activity' },
+        { id: 11, type: 'want', label: 'Collection' },
+        { id: 12, type: 'income', label: 'Salary' },
+        { id: 13, type: 'income', label: 'Earning' },
+        { id: 14, type: 'income', label: 'Payee' },
+        { id: 15, type: 'need', label: 'Medical' },
+        { id: 16, type: 'income', label: 'Refund' },
+        { id: 17, type: 'want', label: 'Entertainment' },
+
+        { id: 100, type: 'want', label: 'Other' },
+        { id: 101, type: 'need', label: 'Other' },
+        { id: 102, type: 'income', label: 'Other' },
     ];
 
     const groupedOptions = [
         {
             label: 'Need expense',
-            options: selector.filter(item => item.type === 'need').map(item => ({ value: item.text, label: item.text }))
+            options: selector.filter(item => item.type === 'need').map(item => ({ value: item.label, label: item.label ,type:item.type}))
         },
         {
             label: 'Want expense',
-            options: selector.filter(item => item.type === 'want').map(item => ({ value: item.text, label: item.text }))
+            options: selector.filter(item => item.type === 'want').map(item => ({ value: item.label, label: item.label ,type:item.type}))
         },
         {
             label: 'Income',
-            options: selector.filter(item => item.type === 'income').map(item => ({ value: item.text, label: item.text }))
+            options: selector.filter(item => item.type === 'income').map(item => ({ value: item.label, label: item.label ,type:item.type}))
         }
     ];
 
@@ -41,6 +46,16 @@ function AddSelectorDropdown() {
 
     const handleSelect = (selectedOption) => {
         setSelectedOption(selectedOption);
+        
+        onSelect(selectedOption?.type || null, selectedOption?.label || null);
+    };
+    
+    
+    const customStyles = {
+        option: (provided, state) => ({
+            ...provided,
+            color: state.data.label === 'Other' ? '#c19875' : '#3B5451',
+        }),
     };
 
     return (
@@ -50,9 +65,10 @@ function AddSelectorDropdown() {
                 value={selectedOption}
                 onChange={handleSelect}
                 placeholder="Select an option"
+                styles={customStyles}
                 />
             </div>
     );
-}
+    }
 
-export default AddSelectorDropdown;
+export default AddSelector;
