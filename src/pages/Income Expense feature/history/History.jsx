@@ -16,7 +16,7 @@ function History() {
         <React.Fragment>
             <div className="header">
                 <Topic text="History" />
-                <Returnbtn url='/profile' />
+                <Returnbtn url='/' />
             </div>
             <div className="guild">
                 <div className="g-box" style={{ backgroundColor: bgColor[2] }}>Income</div>
