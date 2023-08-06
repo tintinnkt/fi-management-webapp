@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import styles from './Adding.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
-
+import dt from '../../../service/data/Record.json'
 //component
 import Topic from '../../../components/topic/topic';
 import NavigationBar from '../../../components/navbar/nav';
@@ -21,20 +21,21 @@ function Adding() {
 
     const handleRecord = () => {
         const newData = {
-            userID: 123, // Replace with the actual user ID
+            id: dt.length + 1, // Generating an ID based on current data length
+            userID: 123, // Replace with actual user ID
             amount: parseFloat(document.querySelector(`.${styles.money}`).value),
             type: selectedType,
             name: selectedLabel,
             date: date.toISOString().split('T')[0],
         };
-
+    
+        dt.push(newData);
         console.log('Collected Data:', newData);
-
+    
         document.querySelector(`.${styles.money}`).value = '';
-        setSelectedType(null);
-        setSelectedLabel(null);
         setDate(new Date());
     };
+    
 
     return (
         <>
