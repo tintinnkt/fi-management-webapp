@@ -12,6 +12,7 @@
 .💩 {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .name {
@@ -20,9 +21,12 @@
 }
 
 .amount {
-    width: 85%;
+    position: absolute;
+    width: 100%;
     font-size: 25px;
     text-align: end;
+    left: -3%;
+    top: 10%;
 
 }
 
