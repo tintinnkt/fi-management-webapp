@@ -4,7 +4,6 @@ import './history.css'
 
 //components
 import Topic from '../../../components/topic/topic';
-import NavigationBar from '../../../components/navbar/nav';
 import HistoryCard from '../../../components/card/HistoryCard'
 import Returnbtn from '../../../components/returnBtn/returnbtn';
 
