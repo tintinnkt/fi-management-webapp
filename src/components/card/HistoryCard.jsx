@@ -13,7 +13,7 @@ function HistoryCard({ prop }) {
   }
 
   return (
-    <div className="card-history" key={prop.id} style={{ backgroundColor: bgColor }}>
+    <div className="card-history1" key={prop.id} style={{ backgroundColor: bgColor }}>
       <div className="💩">
         <div className="name">{prop.name}</div>
         <div className="amount">{prop.amount}</div>

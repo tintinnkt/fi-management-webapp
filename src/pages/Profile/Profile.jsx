@@ -38,6 +38,7 @@ const ProfileC = () => {
           <div className={styles.Expense}>Expense: {totalWant + totalNeed}</div>
           <div className={styles.Net}>Net: {totalIncome - (totalWant + totalNeed)}</div>
           <div className={styles.bar}>
+            
             <ProgressBar >
               <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
               <ProgressBar label="Want" variant="warning" now={totalWant / totalIncome * 100} key={2} />

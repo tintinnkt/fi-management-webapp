@@ -1,4 +1,4 @@
-.card-history {
+.card-history1 {
     padding-top: 20px;
     padding-bottom: 5px;
     padding-left: 15px;
@@ -10,27 +10,49 @@
 
 }
 
+.card-history2 {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-top: 3px solid #000000;
+    color: #000000;
+    position: relative;
+    width: 414px;
+    height: 85px;
+    background-color: #ffffff;
+
+}
+
 .💩 {
     display: flex;
     flex-wrap: wrap;
-    position: relative;
+   
 }
 
 .name {
     font-size: 20px;
+    position: absolute;
+    top: 10px;
 
 }
 
 .amount {
     position: absolute;
-    width: 100%;
-    font-size: 25px;
-    text-align: end;
-    left: -3%;
-    top: 15%;
+    font-size: 35px;
+    left: 80%;
+    top: 20%;
 
+}
+
+.money {
+
+    position: absolute;
+    top: 55%;
 }
 
 .date {
+    position: absolute;
+    top: 50px;
     font-size: 13px;
 }
+

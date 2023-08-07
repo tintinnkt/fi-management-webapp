@@ -71,7 +71,7 @@ a {
     font-size: 27px;
     color: black;
     position: relative;
-    top: 330px;
+    top: 280px;
     padding-left: 20px;
 
 }
@@ -134,4 +134,25 @@ a {
     position: absolute;
     top: 22px;
     left: -65%;
+}
+
+
+.spending {
+
+    position: absolute;
+    top: 40px;
+}
+
+.spending {
+
+    position: relative;
+    top:300px
+}
+
+.line {
+    position: relative;
+    top: 301px;
+    width: 414px;
+    height: 2px;
+    background-color: black;
 }

@@ -21,8 +21,11 @@ const Home = () => {
       <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={()=>{}}/></Link>
       </div>
 
-      <SpendingTypeCard />
-      <NavigationBar />
+      <div className="spending"><SpendingTypeCard /></div>
+      <div className="spending"><SpendingTypeCard /></div>
+      <div className="spending"><SpendingTypeCard /></div>
+      <div className="line"></div>
+ื      <NavigationBar />
     </>
   );
 };
