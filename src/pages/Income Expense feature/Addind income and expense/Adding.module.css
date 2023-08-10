@@ -10,7 +10,7 @@ body {
     border-radius: 10px;
     border: 1px solid black;
     top: 150px;
-    left: 35px;
+    left: 8%;
     width: 350px;
     height: 530px;
     justify-content: center;
@@ -32,7 +32,7 @@ body {
     font-size: 36px;
     position: relative;
     top: 187px;
-    left: 130px;
+    left: 33%;
 }
 
 #nav {

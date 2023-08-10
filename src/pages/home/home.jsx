@@ -25,6 +25,8 @@ const Home = () => {
       <div className="spending"><SpendingTypeCard /></div>
       <div className="spending"><SpendingTypeCard /></div>
       <div className="line"></div>
+
+      <div className="login-container"></div>
 ื      <NavigationBar />
     </>
   );

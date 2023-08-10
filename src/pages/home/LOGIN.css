@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+
+body {
+
+    font-family: 'Lilita One', cursive;
+}
+.login-container {
+
+    width: 300px;
+    height: 400px;
+    background-color: #ffe57c;
+    z-index: 2;
+    border: 4cqi solidrgb(210, 210, 210);
+    border-radius: 15px;
+    position: relative;
+}
