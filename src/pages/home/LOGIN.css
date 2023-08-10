@@ -10,7 +10,74 @@ body {
     height: 400px;
     background-color: #ffe57c;
     z-index: 2;
-    border: 4cqi solidrgb(210, 210, 210);
+    border: 3px solid #ffb300;
     border-radius: 15px;
     position: relative;
+}
+
+.Join {
+    word-spacing: 3px;
+    font-size: 30px;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 20px;
+    left: 31%;
+    
+}
+
+.intro {
+
+    position: absolute;
+    color: rgb(0, 0, 0);
+    left: 5%;
+    width:270px;
+    top: 15%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 16.5px;
+    line-height: 20px;
+}
+
+.link{
+    background-color: white;
+    position: relative;
+    left: 120px;
+    width: 100px;
+    height: 50px;
+    
+}
+
+.img-container {
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid rgb(175, 175, 175);
+    position: absolute;
+    left: -110px;
+    top: 6px;
+
+}
+.Google{
+
+    width: 100%;
+    height: 100%;
+}
+.here {
+
+    position: absolute;
+    color: black;
+    top: 7px;
+    left: -64px;
+    top: 12.5px;
+}
+.click {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    top: 320px;
+    width: 150px;
+    height: 45px;
+    left: 73px;
 }
