@@ -8,7 +8,9 @@ import NavigationBar from '../../components/navbar/nav';
 import PieChart from '../../components/pie/PieChart';
 import { ProgressBar } from 'react-bootstrap';
 
-const ProfileC = () => {
+import { GoogleLogout } from 'react-google-login';
+
+const ProfileC = ({logOut}) => {
   const calculateSumByTypeAndUser = (data, type, userID) => {
     return data.reduce((total, item) => {
       if (item.type === type && item.userID === userID) {
@@ -26,9 +28,13 @@ const ProfileC = () => {
   // Filter the data for 'want' and 'need' expense types
   const wantAndNeedData = dt.filter(item => item.type === 'want' || item.type === 'need');
 
+  const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
+
   return (
     <>
       <div className={styles.container}>
+        
+      <GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} />
         <div className={styles.profile}>
           <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
         </div>

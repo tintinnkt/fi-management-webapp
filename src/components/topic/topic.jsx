@@ -1,5 +1,5 @@
 import React from 'react'
-import './Topic.css'
+import './topic.css'
 
 function Topic({text}) {
   return (

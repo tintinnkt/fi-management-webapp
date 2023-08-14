@@ -1,44 +1,47 @@
-import React from 'react';
-import './login.css';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { gapi } from 'gapi-script';
 
-const Login = () => {
+const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
+
+const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
+  const navigate = useNavigate();
+  
+  const handleGoogleLoginSuccess = (response) => {
+    
+      console.log('yay', response);
+      responseGoogleSuccess();
+      navigate('/');
+  };
+
+  const handleGoogleLoginFailure = (response) => {
+      console.log(response);
+  };
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId,
+        scope: 'email',
+      });
+    }
+  gapi.load('client:auth2', start);
+  }, []);
+
   return (
-    <div>
-      <div className="Login">Login</div>
-      <div className="continue">
-        We will help you <i className="bi bi-balloon-heart"></i>
-      </div>
+    <div className="login-container">
+      <h2>Login</h2>
+      <GoogleLogin
+        clientId={clientId}
+        buttonText="Sign in with Google"
+        onSuccess={handleGoogleLoginSuccess}
+        onFailure={handleGoogleLoginFailure}
+        cookiePolicy={'single_host_origin'}
+        isSignedIn={true}
+      />
 
-      <div className="Username">
-        <div className="username" id="">
-          Username
-        </div>
-        <div className="icon">
-          <i className="bi bi-person-circle"></i>
-        </div>
-        <input type="text" className="fillin" id="usn" style={{ fontSize: "50px", color: "black" }} />
-      </div>
-
-      <div className="Username">
-        <div className="username">Password</div>
-        <div className="icon">
-          <i className="bi bi-lock"></i>
-        </div>
-        <input type="password" className="fillin" id="pw" />
-      </div>
-
-      <div className="Log">
-        <img className="loginbutton" src="./loginpicture/Loginbutton.png" height="1500px" width="1300px" alt="Login" />
-      </div>
-
-      <div className="A">
-        Don't have an account?
-        <div className="B">Sign up</div>
-      </div>
-
-      <div className="circle">
-        <img className="Circle" src="./loginpicture/circle.png" alt="Circle" />
-      </div>
+    
     </div>
   );
 };

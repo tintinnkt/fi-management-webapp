@@ -5,6 +5,7 @@ import Topic from '../../components/topic/topic';
 import NavigationBar from '../../components/navbar/nav';
 import SavingForm from '../../components/card/form/NewSavingForm';
 import './Saving.css';
+import RestrictedPage from '../../components/restricted/restrictedpage';
 
 function Saving() {
   const [filteredData, setFilteredData] = useState(dt.filter((save) => save.userid === 101));
@@ -26,7 +27,7 @@ function Saving() {
   filteredData.sort((a, b) => a.id - b.id);
 
   return (
-    <>
+    <RestrictedPage>
       <Topic text="My Saving" />
       <div className="row2">
         {filteredData.map((save) => (
@@ -37,7 +38,7 @@ function Saving() {
 
       </div>
       <NavigationBar />
-    </>
+    </RestrictedPage>
   );
 }
 

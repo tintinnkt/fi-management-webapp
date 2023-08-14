@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './home.css'; // Import the CSS file if using this JSX in a React component
+
+import { gapi } from 'gapi-script'
 
 import NavigationBar from '../../components/navbar/nav'
 import SpendingTypeCard from '../../components/card/SpendingTypeCard';
@@ -26,7 +28,6 @@ const Home = () => {
       <div className="spending"><SpendingTypeCard /></div>
       <div className="line"></div>
 
-      
 ื      <NavigationBar />
     </>
   );
