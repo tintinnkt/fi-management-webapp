@@ -2,21 +2,22 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
+import './login.css'
 
 const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
 
 const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
   const navigate = useNavigate();
-  
+
   const handleGoogleLoginSuccess = (response) => {
-    
-      console.log('yay', response);
-      responseGoogleSuccess();
-      navigate('/');
+
+    console.log('yay', response);
+    responseGoogleSuccess();
+    navigate('/');
   };
 
   const handleGoogleLoginFailure = (response) => {
-      console.log(response);
+    console.log(response);
   };
 
   useEffect(() => {
@@ -26,22 +27,24 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
         scope: 'email',
       });
     }
-  gapi.load('client:auth2', start);
+    gapi.load('client:auth2', start);
   }, []);
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <GoogleLogin
+      <h2>Login right here</h2>
+      <div className="signin">
+        <GoogleLogin
         clientId={clientId}
         buttonText="Sign in with Google"
         onSuccess={handleGoogleLoginSuccess}
         onFailure={handleGoogleLoginFailure}
         cookiePolicy={'single_host_origin'}
         isSignedIn={true}
-      />
+      /></div>
 
-    
+
+
     </div>
   );
 };

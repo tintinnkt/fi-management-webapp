@@ -5,7 +5,7 @@ body {
   font-family: 'Lilita One', cursive;
   font-size: 50px;
   zoom: 170%;
-  background-color: white;
+  background-color: #ffe57c;
 }
 
 .Login {
@@ -120,3 +120,14 @@ button {
 
 
 
+h2 {
+  position: relative;
+  left: 12%;
+  top: 30%;
+}
+
+.signin {
+  position: relative;
+  left: 6%;
+  top: 27%;
+}
