@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AuthContext from './service/user/useContext'
 //pages
 import Saving from './pages/MySaving/Saving'
 import Adding from './pages/Income Expense feature/Addind income and expense/Adding'
@@ -16,10 +17,8 @@ import './index.css'
 import Login from './pages/login/login'
 import RestrictedPage from './components/restricted/restrictedpage'
 
-const AuthContext = createContext();
-
 function App() {
-  const [ auth, setAuth ] = useState(false);
+  const [ auth, setAuth ] = useState(null);
 
 
   return (
@@ -32,13 +31,14 @@ function App() {
           <Route path="/debt"     element={<RestrictedPage><Debt     /></RestrictedPage>} />
           <Route path="/profile"  element={<RestrictedPage><ProfileC logOut={() => {
               if(!auth) return;
-              else setAuth(false);
+              else setAuth(null);
             }} /></RestrictedPage>} />
           <Route path="/history"  element={<RestrictedPage><History  /></RestrictedPage>} />
           <Route path="/login"    element={<Login 
-            responseGoogleSuccess={() => {
+            responseGoogleSuccess={(res) => {
               if(auth) return;
-              else setAuth(true);
+              else setAuth(res);
+              console.log("Hello "+`${res.googleId}`)
             }}
 
             

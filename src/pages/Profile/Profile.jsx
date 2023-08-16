@@ -1,5 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import React from 'react';
+import React,{ useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../App';
 import styles from './Profile.module.css';
 import dt from '../../service/data/Record.json';
 
@@ -10,7 +12,11 @@ import { ProgressBar } from 'react-bootstrap';
 
 import { GoogleLogout } from 'react-google-login';
 
-const ProfileC = ({logOut}) => {
+const ProfileC = ({ logOut }) => {
+
+  const profile = useContext(AuthContext);
+  const navigate=useNavigate();
+
   const calculateSumByTypeAndUser = (data, type, userID) => {
     return data.reduce((total, item) => {
       if (item.type === type && item.userID === userID) {
@@ -33,18 +39,18 @@ const ProfileC = ({logOut}) => {
   return (
     <>
       <div className={styles.container}>
-        
-      <GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} />
+        <GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} />
+
         <div className={styles.profile}>
           <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
         </div>
         <div className={styles.detail}>
-          <div className={styles.Name}>Name</div>
+          <div className={styles.Name}>Name : {profile.name}</div>
           <div className={styles.Income}>Income: {totalIncome}</div>
           <div className={styles.Expense}>Expense: {totalWant + totalNeed}</div>
           <div className={styles.Net}>Net: {totalIncome - (totalWant + totalNeed)}</div>
           <div className={styles.bar}>
-            
+
             <ProgressBar >
               <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
               <ProgressBar label="Want" variant="warning" now={totalWant / totalIncome * 100} key={2} />
@@ -56,7 +62,7 @@ const ProfileC = ({logOut}) => {
         </div>
         <button className={styles.logout}>Log out</button>
         <div className={styles.pie}>
-          <PieChart data={wantAndNeedData}/>
+          <PieChart data={wantAndNeedData} />
         </div>
       </div>
       <NavigationBar />

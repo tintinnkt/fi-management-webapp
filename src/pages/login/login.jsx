@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
+// import { AuthContext } from '../../App';
 import './login.css'
 
 const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
@@ -11,13 +12,13 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
   const handleGoogleLoginSuccess = (response) => {
 
-    console.log('yay', response);
-    responseGoogleSuccess();
+    console.log('yay', response.profileObj.name);
+    responseGoogleSuccess(response.profileObj);
     navigate('/');
   };
 
   const handleGoogleLoginFailure = (response) => {
-    console.log(response);
+    console.log("FAIL");
   };
 
   useEffect(() => {
