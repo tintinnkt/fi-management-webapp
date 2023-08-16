@@ -15,7 +15,6 @@ import { GoogleLogout } from 'react-google-login';
 const ProfileC = ({ logOut }) => {
 
   const profile = useContext(AuthContext);
-  const navigate=useNavigate();
 
   const calculateSumByTypeAndUser = (data, type, userID) => {
     return data.reduce((total, item) => {

@@ -31,7 +31,7 @@ function App() {
           <Route path="/debt"     element={<RestrictedPage><Debt     /></RestrictedPage>} />
           <Route path="/profile"  element={<RestrictedPage><ProfileC logOut={() => {
               if(!auth) return;
-              else setAuth(null);
+              else setAuth(false);
             }} /></RestrictedPage>} />
           <Route path="/history"  element={<RestrictedPage><History  /></RestrictedPage>} />
           <Route path="/login"    element={<Login 
