@@ -69,10 +69,9 @@ const Home = () => {
         </div>
       ))}
       </div>
-      <div className="H-space"></div>
-      <div className="nav">
+
         <NavigationBar />
-      </div>
+
       </div>
 
     </>
