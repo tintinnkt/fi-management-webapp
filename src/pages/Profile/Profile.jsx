@@ -15,7 +15,7 @@ import { GoogleLogout } from 'react-google-login';
 const ProfileC = ({ logOut }) => {
 
   const profile = useContext(AuthContext);
-
+  //! from /service/data/userRecord.json
   const calculateSumByTypeAndUser = (data, type, userID) => {
     return data.reduce((total, item) => {
       if (item.type === type && item.userID === userID) {
@@ -29,9 +29,9 @@ const ProfileC = ({ logOut }) => {
   const totalIncome = calculateSumByTypeAndUser(dt, 'income', userID);
   const totalWant = calculateSumByTypeAndUser(dt, 'want', userID);
   const totalNeed = calculateSumByTypeAndUser(dt, 'need', userID);
-
   // Filter the data for 'want' and 'need' expense types
   const wantAndNeedData = dt.filter(item => item.type === 'want' || item.type === 'need');
+  //!end
 
   const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
 
@@ -64,7 +64,9 @@ const ProfileC = ({ logOut }) => {
           <PieChart data={wantAndNeedData} />
         </div>
       </div>
+      <div className="nav">
       <NavigationBar />
+      </div>
     </>
   );
 };

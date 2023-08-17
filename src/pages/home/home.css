@@ -147,20 +147,15 @@ a {
     
 }
 
-.line {
-    position: relative;
-    top: 301px;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-}
-
 .login-container {
 
     width: 300px;
     height: 400px;
     background-color: #ffe57c;
     z-index: 2;
-    border: 4cqi solidrgb(210, 210, 210));
+    border: 4cqi solid rgb(210, 210, 210);
     border-radius: 15px;
+}
+.nav{
+    position: fixed;
 }
