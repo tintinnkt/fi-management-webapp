@@ -35,7 +35,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
   return (
     <>
-
+      
       <h2>Login right here</h2>
       <div className={styles.signin}>
         <GoogleLogin
@@ -47,6 +47,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
           isSignedIn={true}
         />
       </div>
+      <div className={styles.lc}></div>
 
 
 
