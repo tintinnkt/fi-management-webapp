@@ -42,30 +42,39 @@ const Home = () => {
 
   const groupedValues = Object.values(groupedData);
   groupedValues.sort((a, b) => b.totalAmount - a.totalAmount);
-  
+
   //!end
   return (
     <>
 
       <div className="Title">
         <a href=""><i className="bi bi-bell-fill"></i></a>
-        <div className="totalbalance-value">XXXX</div>
+        <div className="totalbalance-value">{(totalIncome - totalExpense).toFixed(2)}</div>
         <div className="totalbalance">Total Balance</div>
         <i className="bi bi-emoji-smile"></i>
       </div>
+      <div className="home-con">
+        <div className="rec-con">
       <div className="spending-rec">Spending Record</div>
-      
+      <div className="rec-body"></div>
+        </div>
+
       <div className="spending-detail">Spending Detail
-      <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={()=>{}}/></Link>
+        <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={() => { }} /></Link>
       </div>
+      <div className="spending-con">
       {groupedValues.map((rec) => (
         <div className="spending">
           <SpendingTypeCard prop={rec} total={totalExpense} />
         </div>
       ))}
-      <div className="line"></div>
+      </div>
+      <div className="H-space"></div>
+      <div className="nav">
+        <NavigationBar />
+      </div>
+      </div>
 
-ื      <NavigationBar />
     </>
   );
 };

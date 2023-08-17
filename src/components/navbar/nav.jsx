@@ -5,7 +5,7 @@ import './nav.css';
 const NavigationBar = () => {
   return (
     <>
-      <div className="space"></div>
+      <div className="Nspace"></div>
       <nav className="bottom-navigation">
         <Link to="/" className="nav-item">
           <div className="logo-placeholder">
