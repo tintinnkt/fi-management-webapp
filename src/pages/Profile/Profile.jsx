@@ -38,8 +38,8 @@ const ProfileC = ({ logOut }) => {
   return (
     <>
       <div className={styles.container}>
-        <GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} />
 
+        <div className={styles.logout}><GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} /></div>
         <div className={styles.profile}>
           <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
         </div>
@@ -59,7 +59,7 @@ const ProfileC = ({ logOut }) => {
           <div className={styles.line}></div>
           <div className={styles.Report}></div>
         </div>
-        <button className={styles.logout}>Log out</button>
+       
         <div className={styles.pie}>
           <PieChart data={wantAndNeedData} />
         </div>

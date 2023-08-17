@@ -20,10 +20,7 @@ body {
 
 .logout {
 
-    background-color: #F6D06B;
-    border-radius: 5px;
-    border: 1px solid rgb(82, 82, 82);
-    box-shadow: 3px 2px #50505065;
+  
     width: 127px;
     height: 50px;
     font-family: 'Lilita One', cursive;

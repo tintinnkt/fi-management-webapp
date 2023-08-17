@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
-// import { AuthContext } from '../../App';
-import './login.css'
+import styles from './login.module.css'; // Import the CSS module object
 
 const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
+
+
+
 
 const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
   const navigate = useNavigate();
@@ -32,21 +34,24 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
   }, []);
 
   return (
-    <div className="login-container">
+    <>
+
       <h2>Login right here</h2>
-      <div className="signin">
+      <div className={styles.signin}>
         <GoogleLogin
-        clientId={clientId}
-        buttonText="Sign in with Google"
-        onSuccess={handleGoogleLoginSuccess}
-        onFailure={handleGoogleLoginFailure}
-        cookiePolicy={'single_host_origin'}
-        isSignedIn={true}
-      /></div>
+          clientId={clientId}
+          buttonText="Sign in with Google"
+          onSuccess={handleGoogleLoginSuccess}
+          onFailure={handleGoogleLoginFailure}
+          cookiePolicy={'single_host_origin'}
+          isSignedIn={true}
+        />
+      </div>
 
 
 
-    </div>
+
+    </>
   );
 };
 
