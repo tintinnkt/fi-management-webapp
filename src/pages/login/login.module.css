@@ -3,23 +3,82 @@
 
 h2 {
   position: absolute;
-  zoom: 170%;
-  left: 16%;
+  zoom: 120%;
+  left: 11%;
   top: 30%;
+  color: #000;
+  z-index: 2;
 
 }
 
 .signin {
   position: absolute;
-  top: 40%;
-  left: 14%;
-  zoom: 170%;
+  top: 55%;
+  left: 15%;
+  zoom: 100%;
+  z-index: 2;
   
 }
 
 .lc {
-
+  position: relative;
   width: 100%;
   height: 896px;
-  background-color: #F6D06B;
+  background-color: #FEE9B1;
+  z-index: -1000;
+  top: 0%;
+}
+
+.LC {
+position: relative;
+top: -620px;
+z-index: 1;
+background-color: white;
+border: #000 3px solid;
+border-radius: 120%;
+width: 250px;
+height: 250px;
+z-index: 1;
+left: 3%;
+
+}
+
+.pig {
+
+position: relative;
+top: -532px;
+z-index: 0;
+left: 40%;
+width: 70%;
+overflow: hidden;
+z-index: 1;
+}
+
+.pig img {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.Circle {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 0);
+  position: relative;
+  top: -920px;
+  left: 50%;
+}
+
+.circle {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 0);
+  position: relative;
+  top: -910px;
+  left: 60%;
 }
