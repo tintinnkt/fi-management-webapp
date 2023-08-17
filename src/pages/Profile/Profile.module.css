@@ -26,8 +26,12 @@ body {
     font-family: 'Lilita One', cursive;
     font-size: 34px;
     position: absolute;
-    left: 35%;
-    top:650px;
+    left: 32%;
+    zoom: 120%;
+    top:550px;
+    text-align: center;
+    
+    
 
 
 }
