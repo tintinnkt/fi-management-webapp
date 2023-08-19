@@ -5,7 +5,7 @@ import { gapi } from 'gapi-script';
 import styles from './login.module.css'; // Import the CSS module object
 import { Container } from 'react-bootstrap';
 
-const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
+const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
 
 
 

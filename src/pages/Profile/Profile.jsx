@@ -33,7 +33,7 @@ const ProfileC = ({ logOut }) => {
   const wantAndNeedData = dt.filter(item => item.type === 'want' || item.type === 'need');
   //!end
 
-  const clientId = "340099942190-mln2be557pfliu1qs7eg7hh8b7b7vb4m.apps.googleusercontent.com"
+  const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
 
   return (
     <>
