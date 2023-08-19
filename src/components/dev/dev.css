@@ -1,21 +1,21 @@
 .box-around{
-    width: 48%;
+    width: 88%;
     padding-left: 5px;
     padding-right: 5px;
     position: relative;
 }
 .dev-box{
-    position: absolute;
     color: #ffffff;
     width: 100%;
+    max-width: 600px;
     background-color: #41c2a6;
     border: 1px solid #7a7a7a;
     border-radius: 15px;
     padding-bottom: 18px;
-    box-shadow: 2px 4.5px #7a7a7a62;
+    box-shadow: 6px 8.5px #7a7a7a98;
     margin-top: 20px;
     justify-content: center;
-    position: relative;
+    position: absolute;
 }
 .dev-detail{
     position: relative;
@@ -33,7 +33,17 @@
     font-size: 23px;
     border-bottom: 1px solid #474747;
     color: #3a3a3a;
+    padding-bottom: 3px;
+    display: flex;
+    padding-right: 10px;
 }
+.chn-cover{
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+
+}
+
 .devname .dv{
     position: absolute;
     font: italic;

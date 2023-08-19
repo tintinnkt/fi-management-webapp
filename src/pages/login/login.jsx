@@ -4,8 +4,7 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import styles from './login.module.css'; // Import the CSS module object
 import { Container } from 'react-bootstrap';
-import Topic from '../../components/topic/topic';
-import DevCard from '../../components/dev/Dev';
+import DevPack from '../../components/dev/DevPack';
 
 const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
 
@@ -66,7 +65,9 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
           </div>
         </div>
         
-        <div className={styles.lgbottom}></div>
+        <div className={styles.lgbottom}>
+          <DevPack />
+        </div>
       </div>
 
     </>

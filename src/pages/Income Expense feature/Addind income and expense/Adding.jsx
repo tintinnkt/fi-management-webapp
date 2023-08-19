@@ -39,15 +39,16 @@ function Adding() {
 
     return (
         <>
-            <Topic text="Add Income & Expense" />
-            <Returnbtn url="/"/>
+            <Topic text="Add Money Record"/>
+            <Returnbtn url="/" />
+            <div className={styles.aaa}>
             <div className={styles.container}>
                 <div className={styles.Howmuch}>How much ?</div>
-                <input className={styles.money} type="number" placeholder="Amount" />
                 <div className={styles.dropdown}>
 
                     <AddSelector onSelect={handleOptionSelect} />
                 </div>
+                <input className={styles.money} type="number" placeholder="Amount" />
 
                 <div className={styles.Date}>
                     <DatePicker
@@ -59,8 +60,8 @@ function Adding() {
                 </div>
             </div>
 
-            <button className={styles.rec} onClick={handleRecord}>Record</button>
-            <div className="space"></div>
+            <button className={styles.rec} onClick={handleRecord}>Submit</button>
+            </div>
         </>
     );
 }

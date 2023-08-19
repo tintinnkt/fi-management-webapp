@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './dev.css';
+import 'react-bootstrap'
 
-function DevCard({ user }) {
+function DevCard() {
+
     const dev = [
         {
             username: "Tintinnkt",
@@ -10,7 +12,7 @@ function DevCard({ user }) {
             devFB: "https://www.facebook.com/krittin.tragunejindarat/",
             devIG: "https://www.instagram.com/tintinnkt/",
             devGithub: "https://github.com/TintinnKT",
-            description : "Database hosting Front-end (Firebase Hosting, Firestore,FetchAPI ,CSS,ReactJS)"
+            description: "Database hosting Front-end (Firebase Hosting, Firestore,FetchAPI ,CSS,ReactJS)"
         },
         {
             username: "Thanathad",
@@ -19,20 +21,24 @@ function DevCard({ user }) {
             devFB: "",
             devIG: "",
             devGithub: "https://github.com/Thanathad",
-            description : "Front-end (HTML,CSS,JSX)"
+            description: "Front-end (HTML,CSS,JSX)"
         }
     ];
+    const [user, setUser] = useState(0);
+    const changeUser=()=>{
+        user ? setUser((pv)=>pv=0) : setUser((pv)=>pv=1)
+    }
 
     return (
         <React.Fragment>
             <div className="box-around">
                 <div className="dev-box">
                     <div className="devicon">
-                        {dev[user].devIcon ? <img src={dev[user].devIcon} className='devimg' alt="Developer Icon" />: null}
+                        {dev[user].devIcon ? <img src={dev[user].devIcon} className='devimg' alt="Developer Icon" /> : null}
                     </div>
                     <div className="dev-body">
                         <div className="dev-detail">
-                            <div className="devname">{dev[user].username} <span className="dv">Dev</span></div>
+                            <div className="devname">{dev[user].username} <div className="chn-cover"><button type="button" className="btn btn-outline-warning"  onClick={changeUser}> change</button></div></div>
                             {dev[user].email ? <div className="email">{dev[user].email}</div> : null}
                             {dev[user].description ? <div className="dev-des">{dev[user].description}</div> : null}
                         </div>

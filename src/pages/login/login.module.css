@@ -4,12 +4,13 @@
   position: relative;
   background-color: #FEE9B1;
   width: 100%;
+  height: 100%;
 }
 
 
 .loginspace {
+  height: 150px;
   position: relative;
-  height: 140px;
 }
 
 .LC {
@@ -25,7 +26,7 @@
   text-align: center;
   left: 6%;
   z-index: 0;
-  top: 180px;
+
 }
 
 .LC h2 {
@@ -41,32 +42,28 @@
 
 .signin {
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-  justify-content: center;
 }
 
 .pigspace {
-  top: 100px;
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-items: right;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 46%;
 }
 
 .pig {
- 
   position: relative;
-  left: 37%;
-  top: 280px;
-  width: 70%;
+  bottom: -10px;
+  right: -4px;
+  width: auto;
 }
 
 .pig img {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
-  height: 90%;
   object-fit: cover;
-  z-index: 700;
+  z-index: 100;
 
 }
 
@@ -78,24 +75,17 @@
   
 }
 
-.lgbottom{
-  background-color: #FEE9B1;
-  width: 100%;
-  height: 280px;
- 
-}
-
 .welcome {
-
+  
   font-size: 60px;
   letter-spacing: 6px;
   color: black;
   text-shadow:2px 4px  #ffffff;
   position: relative;
-  left: 13%;
-  top:70px;
-
- 
+  text-align: center;
+  top:50px;
+  
+  
 }
 
 .intro {
@@ -103,6 +93,17 @@
   position: relative;
   color: #ff8d36;
   top: 60px;
-  left: 26%;
+  text-align: end;
+  padding-right: 10%;
   text-shadow:1px 3px  #ffffff;
+}
+
+.lgbottom{
+  background-color: #9b572a;
+  width: 100%;
+  padding-bottom: 20%;
+  padding-top: 20px;
+  justify-content: center;
+  padding-left: 20%;
+ 
 }

@@ -3,20 +3,23 @@ body {
     font-family: 'Lilita One', cursive;
     background-color: #FFFFE8;
 }
+
 .container {
-    
+
     width: 100%;
     position: relative;
-    top: 30px;
-    height: 100px;
-    
-    
+    justify-content: center;
+
+
 }
-.profile{
+
+.profile {
+    padding-top: 25px;
     text-align: center;
     padding-bottom: 10px;
 }
-.detail{
+
+.detail {
     page-break-after: 10px;
     position: relative;
     display: flex;
@@ -25,18 +28,19 @@ body {
     font-size: 20px;
 }
 
-.amoutDatail{
-    padding-left: 2.5px;
-    padding-right: 2.5px;
+.amoutDatail {
+    padding-inline: 3px;
 }
 
 .logout {
 
     font-family: 'Lilita One', cursive;
     font-size: 34px;
-    position: relative;
-    justify-content: center;
-    text-align: center;
+    position: fixed;
+    z-index: 100000000;
+    box-shadow: 3px 3px #FFFFE8;
+    left: 40%;
+    bottom: 100px;
 }
 
 
@@ -56,7 +60,8 @@ body {
     top: 10px
 }
 
-.bar{
+.bar {
+    z-index: 3;
     padding-inline: 25px;
     position: relative;
     padding-top: 5%;
@@ -64,10 +69,13 @@ body {
 }
 
 .pie {
-    position:relative;
+    z-index: 2;
+    top: -30px;
+    position: relative;
     justify-content: center;
     justify-items: center;
     text-align: center;
     width: 100%;
     right: 10px;
+    padding-bottom: 20px;
 }

@@ -1,63 +1,44 @@
-body {
-
-    font-family: 'Lilita One', cursive;
+.aaa {
+    position: relative;
+    padding-top: 100px;
+    justify-content: center;
+    left: calc(2% + 10px);
 }
-
 .container {
 
     background-color: #FEE9B1;
-    position: relative;
     border-radius: 10px;
-    border: 1px solid black;
-    top: 150px;
-    left: 8%;
+    border: 1.5px solid black;
     width: 350px;
     height: 530px;
     justify-content: center;
+    text-align: center;
+
 }
 
 .dropdown {
+    position: absolute;
     justify-content: center;
-    margin: auto;
-}
-
-.rec {
-
-    background-color: #FFC033;
-    border-radius: 5px;
-    border: 1px solid black;
-    width: 144px;
-    height: 50px;
-    font-family: 'Lilita One', cursive;
-    font-size: 36px;
-    position: relative;
-    top: 187px;
-    left: 33%;
-}
-
-#nav {
-
-    border: 0.5px solid black;
-    width: 100%;
-    position: relative;
-    left: 0px;
-    top: 250px;
+    left: 60px;
 }
 
 .Howmuch {
+    padding-top: 20px;
     font-size: 36px;
-    position: absolute;
-    top: 30px;
-    left: 85px;
+    position: relative;
+}
+
+addDetail {
+    position: relative;
+    align-items: center;
 }
 
 
 .Date {
-
-    position: absolute;
+    padding-left: 62px;
+    position: relative;
     width: 50px;
-    top: 170px;
-    left: 62px;
+    top: 40px;
 }
 
 .calender {
@@ -66,7 +47,7 @@ body {
     font-size: 30px;
     width: 216.9px;
     border-radius: 10px;
-    
+
 
 }
 
@@ -78,9 +59,7 @@ body {
     width: 216.9px;
     border-radius: 10px;
     background-color: white;
-    position: absolute;
-    left: 62px;
-    top: 237px;
+    position: relative;
 
 }
 
@@ -88,23 +67,20 @@ body {
 .money {
     width: 216.9px;
     height: 49.5px;
-    position: absolute;
-    left: 61px;
-    top: 102px;
+    position: relative;
     border-radius: 10px;
-    font-family: 'Lilita One', cursive;
     font-size: 36px;
     text-align: center;
+    top: 23px;
+
 }
 
 .type {
     width: 216.9px;
     height: 49.5px;
-    position: absolute;
-    left: 61px;
-    top: 180px;
+    position: relative;
+    padding-top: 30px;
     border-radius: 10px;
-    font-family: 'Lilita One', cursive;
     font-size: 36px;
     text-align: center;
     background-color: white;
@@ -117,4 +93,20 @@ body {
 
     font-size: 20px;
     margin-left: 180px;
+}
+
+.rec {
+
+    background-color: #FFC033;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 144px;
+    height: 50px;
+    font-family: 'Lilita One', cursive;
+    font-size: 36px;
+    position: relative;
+    justify-content: center;
+    top: 20px;
+    left: 100px;
+
 }

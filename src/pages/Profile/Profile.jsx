@@ -1,21 +1,17 @@
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../App';
 import styles from './Profile.module.css';
 import dt from '../../service/data/Record.json';
-
-//component
 import NavigationBar from '../../components/navbar/nav';
 import PieChart from '../../components/pie/PieChart';
 import { ProgressBar } from 'react-bootstrap';
-
 import { GoogleLogout } from 'react-google-login';
+import Returnbtn from '../../components/returnBtn/returnbtn';
 
 const ProfileC = ({ logOut }) => {
-
   const profile = useContext(AuthContext);
-  //! from /service/data/userRecord.json
+  const [isLoading, setIsLoading] = useState(true);
+
   const calculateSumByTypeAndUser = (data, type, userID) => {
     return data.reduce((total, item) => {
       if (item.type === type && item.userID === userID) {
@@ -29,16 +25,23 @@ const ProfileC = ({ logOut }) => {
   const totalIncome = calculateSumByTypeAndUser(dt, 'income', userID);
   const totalWant = calculateSumByTypeAndUser(dt, 'want', userID);
   const totalNeed = calculateSumByTypeAndUser(dt, 'need', userID);
-  // Filter the data for 'want' and 'need' expense types
   const wantAndNeedData = dt.filter(item => item.type === 'want' || item.type === 'need');
-  //!end
+  
+  const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com";
 
-  const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);}, 1000);
+  }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
+        <Returnbtn url="/" />
       <div className={styles.container}>
-
         <div className={styles.profile}>
           <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
           <div className={styles.Name}>Name : {profile.name}</div>
@@ -50,7 +53,7 @@ const ProfileC = ({ logOut }) => {
         </div>
         <div className={styles.bar}>
 
-          <ProgressBar style={{ fontSize: 15, height: 50 }}>
+          <ProgressBar style={{ fontSize: 15, height: 40 }}>
             <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
             <ProgressBar label={`Want ${((totalWant / totalIncome * 100).toFixed(0))}%`} variant="warning" now={totalWant / totalIncome * 100} key={2} />
             <ProgressBar label={`Need ${((totalNeed / totalIncome * 100).toFixed(0))}%`} variant="danger" now={totalNeed / totalIncome * 100} key={3} />
