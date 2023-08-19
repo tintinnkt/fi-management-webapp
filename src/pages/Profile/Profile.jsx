@@ -1,5 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import React,{ useContext } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../App';
 import styles from './Profile.module.css';
@@ -39,34 +39,32 @@ const ProfileC = ({ logOut }) => {
     <>
       <div className={styles.container}>
 
-        <div className={styles.logout}><GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} /></div>
         <div className={styles.profile}>
           <i className={`bi bi-person-circle ${styles['custom-icon']}`}></i>
+          <div className={styles.Name}>Name : {profile.name}</div>
         </div>
         <div className={styles.detail}>
-          <div className={styles.Name}>Name : {profile.name}</div>
-          <div className={styles.Income}>Income: {totalIncome}</div>
-          <div className={styles.Expense}>Expense: {totalWant + totalNeed}</div>
-          <div className={styles.Net}>Net: {totalIncome - (totalWant + totalNeed)}</div>
-          <div className={styles.bar}>
-
-            <ProgressBar >
-              <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
-              <ProgressBar label="Want" variant="warning" now={totalWant / totalIncome * 100} key={2} />
-              <ProgressBar label="Need" variant="danger" now={totalNeed / totalIncome * 100} key={3} />
-            </ProgressBar>
-          </div>
-          <div className={styles.line}></div>
-          <div className={styles.Report}></div>
+          <div className={styles.amoutDatail}>Income: {totalIncome} | </div>
+          <div className={styles.amoutDatail}>Expense: {totalWant + totalNeed} |</div>
+          <div className={styles.amoutDatail}>Net: {totalIncome - (totalWant + totalNeed)}</div>
         </div>
-       
+        <div className={styles.bar}>
+
+          <ProgressBar style={{ fontSize: 15, height: 50 }}>
+            <ProgressBar label={`Net ${((totalIncome - totalWant - totalNeed) / totalIncome * 100).toFixed(2)}%`} variant="success" now={(totalIncome - totalWant - totalNeed) / totalIncome * 100} key={1} />
+            <ProgressBar label={`Want ${((totalWant / totalIncome * 100).toFixed(0))}%`} variant="warning" now={totalWant / totalIncome * 100} key={2} />
+            <ProgressBar label={`Need ${((totalNeed / totalIncome * 100).toFixed(0))}%`} variant="danger" now={totalNeed / totalIncome * 100} key={3} />
+          </ProgressBar>
+        </div>
+
         <div className={styles.pie}>
           <PieChart data={wantAndNeedData} />
         </div>
+        <div className={styles.logout}><GoogleLogout clientId={clientId} buttonText='Log out' onLogoutSuccess={logOut} /></div>
       </div>
-      <div className="nav">
+
       <NavigationBar />
-      </div>
+
     </>
   );
 };

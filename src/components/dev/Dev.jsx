@@ -15,7 +15,7 @@ function DevCard({ user }) {
         {
             username: "Thanathad",
             email: "",
-            devIcon: "https://portal.the1.co.th/images/article/f5babc81-a3ed-4faa-afe1-b34f933ea409_1675406708046",
+            devIcon: "https://inwfile.com/s-p/091l5y.jpg",
             devFB: "",
             devIG: "",
             devGithub: "https://github.com/Thanathad",

@@ -40,12 +40,12 @@ function PieChart({ data }) {
     chartData.push(['Other', otherPercentage]);
   }
   const customStyles ={
-    backgroundColor: "#ffffff00"
+    backgroundColor: "#00000000",
   }
   return (
     <Chart
       width={'500px'}
-      height={'300px'}
+      height={'400px'}
       chartType="PieChart"
       loader={<div>Loading Chart</div>}
       data={chartData}
