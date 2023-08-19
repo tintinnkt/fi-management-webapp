@@ -1,0 +1,67 @@
+.box-around{
+    width: 48%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+.dev-box{
+    position: absolute;
+    color: #ffffff;
+    width: 100%;
+    background-color: #41c2a6;
+    border: 1px solid #7a7a7a;
+    border-radius: 15px;
+    padding-bottom: 18px;
+    box-shadow: 2px 4.5px #7a7a7a62;
+    margin-top: 20px;
+    justify-content: center;
+    position: relative;
+}
+.dev-detail{
+    position: relative;
+    padding-top: 15px;
+    padding-left: 20px;
+    width: 90%;
+    font-size: 17px;
+    
+}
+.dev-des{
+    font-size: 14px;
+    color: #5c5c5c;
+}
+.devname{
+    font-size: 23px;
+    border-bottom: 1px solid #474747;
+    color: #3a3a3a;
+}
+.devname .dv{
+    position: absolute;
+    font: italic;
+    color: #62fc54;
+    font-size: 13px;
+    text-align: end;
+    right: 1px;
+    top: 14%;
+}
+.devicon{
+    position: relative;
+
+    width: 100%;
+}
+.devimg{
+    border-radius: 15px;
+    width: 100%;
+}
+.link{
+    padding-top: 2px;
+    display: flex;
+    justify-content: center;
+    width:  100%;
+}
+.contacticon{
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    height: 50px;
+
+}

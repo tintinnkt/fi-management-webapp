@@ -4,6 +4,8 @@ import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import { gapi } from 'gapi-script';
 import styles from './login.module.css'; // Import the CSS module object
 import { Container } from 'react-bootstrap';
+import Topic from '../../components/topic/topic';
+import DevCard from '../../components/dev/Dev';
 
 const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
 
@@ -36,27 +38,37 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
   return (
     <>
-    
-    <div className={styles.lc}></div>
-      <div className={styles.LC}>
-        <h2>Login right here</h2>
-        <div className={styles.signin}>
-          <GoogleLogin
-            clientId={clientId}
-            buttonText="Sign in with Google"
-            onSuccess={handleGoogleLoginSuccess}
-            onFailure={handleGoogleLoginFailure}
-            cookiePolicy={'single_host_origin'}
-            isSignedIn={true}
-          />
+
+      <div className={styles.lgbg}>
+        <div className={styles.lgbody}>
+          <div className={styles.loginspace}>
+          <div className={styles.LC}>
+            <h2>Login here</h2>
+            <div className={styles.signin}>
+              <GoogleLogin
+                clientId={clientId}
+                buttonText="Google Sign in"
+                onSuccess={handleGoogleLoginSuccess}
+                onFailure={handleGoogleLoginFailure}
+                cookiePolicy={'single_host_origin'}
+                isSignedIn={true}
+              />
+            </div>
+          </div>
         </div>
+        </div>
+        <div className={styles.pigspace}>
+
+          <div className={styles.pig}>
+            <img src="https://cdn-icons-png.flaticon.com/512/1960/1960025.png" />
+            </div>
+        </div>
+        <div className={styles.creator}>
+          <DevCard user={0}/>
+          <DevCard user={1}/>
+        </div>
+      <div className={styles.lgbottom}></div>
       </div>
-      
-      <div className={styles.pig}><img src="https://cdn-icons-png.flaticon.com/512/1960/1960025.png"></img></div>
-      <div className={styles.Circle}></div>
-      <div className={styles.circle}></div>
-
-
 
     </>
   );

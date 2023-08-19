@@ -1,84 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
 
-
-h2 {
-  position: absolute;
-  zoom: 120%;
-  left: 11%;
-  top: 30%;
-  color: #000;
-  z-index: 2;
-
-}
-
-.signin {
-  position: absolute;
-  top: 55%;
-  left: 15%;
-  zoom: 100%;
-  z-index: 2;
-  
-}
-
-.lc {
+.lgbg {
   position: relative;
-  width: 100%;
-  height: 896px;
   background-color: #FEE9B1;
-  z-index: -1000;
-  top: 0%;
+}
+
+
+.loginspace {
+  position: relative;
+  height: 140px;
 }
 
 .LC {
-position: relative;
-top: -620px;
-z-index: 1;
-background-color: white;
-border: #000 3px solid;
-border-radius: 120%;
-width: 250px;
-height: 250px;
-z-index: 1;
-left: 3%;
+  position: absolute;
+  background-color: rgb(255, 187, 39);
+  border: #3d3d3d 3px solid;
+  box-shadow: 6px 7px #50505085;
+  border-radius: 120%;
+  padding-top: 40px;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  text-align: center;
+  left: 6%;
+  z-index: 0;
+}
 
+.LC h2 {
+  position: relative;
+  color: #552618;
+
+}
+
+.lgbody {
+  padding-top: 80px;
+  position: relative;
+}
+
+.signin {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: center;
+}
+
+.pigspace {
+  top: 100px;
+  display: flex;
+  align-items: center;
+  justify-items: right;
 }
 
 .pig {
+  right: 1px;
+  margin-left: auto;
 
-position: relative;
-top: -532px;
-z-index: 0;
-left: 40%;
-width: 70%;
-overflow: hidden;
-z-index: 1;
 }
 
 .pig img {
-
   width: 100%;
+  max-width: 300px;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
-}
-.Circle {
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  border: 3px solid rgb(0, 0, 0);
-  position: relative;
-  top: -920px;
-  left: 50%;
+  z-index: 700;
+
 }
 
-.circle {
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border: 3px solid rgb(0, 0, 0);
-  position: relative;
-  top: -910px;
-  left: 60%;
+.creator {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 40px;
 }
