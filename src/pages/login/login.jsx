@@ -40,34 +40,33 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
     <>
 
       <div className={styles.lgbg}>
+        <div className={styles.welcome}>WELCOME</div>
+        <div className={styles.intro}>We will help you</div>
         <div className={styles.lgbody}>
           <div className={styles.loginspace}>
-          <div className={styles.LC}>
-            <h2>Login here</h2>
-            <div className={styles.signin}>
-              <GoogleLogin
-                clientId={clientId}
-                buttonText="Google Sign in"
-                onSuccess={handleGoogleLoginSuccess}
-                onFailure={handleGoogleLoginFailure}
-                cookiePolicy={'single_host_origin'}
-                isSignedIn={true}
-              />
+            <div className={styles.LC}>
+              <h2>Login here</h2>
+              <div className={styles.signin}>
+                <GoogleLogin
+                  clientId={clientId}
+                  buttonText="Google Sign in"
+                  onSuccess={handleGoogleLoginSuccess}
+                  onFailure={handleGoogleLoginFailure}
+                  cookiePolicy={'single_host_origin'}
+                  isSignedIn={true}
+                />
+              </div>
             </div>
           </div>
-        </div>
         </div>
         <div className={styles.pigspace}>
 
           <div className={styles.pig}>
             <img src="https://cdn-icons-png.flaticon.com/512/1960/1960025.png" />
-            </div>
+          </div>
         </div>
-        <div className={styles.creator}>
-          <DevCard user={0}/>
-          <DevCard user={1}/>
-        </div>
-      <div className={styles.lgbottom}></div>
+        
+        <div className={styles.lgbottom}></div>
       </div>
 
     </>
