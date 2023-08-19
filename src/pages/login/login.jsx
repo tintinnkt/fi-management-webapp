@@ -6,6 +6,7 @@ import styles from './login.module.css'; // Import the CSS module object
 import { Container } from 'react-bootstrap';
 import Topic from '../../components/topic/topic';
 import DevCard from '../../components/dev/Dev';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com"
 
@@ -41,7 +42,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
       <div className={styles.lgbg}>
         <div className={styles.welcome}>WELCOME</div>
-        <div className={styles.intro}>We will help you</div>
+        <div className={styles.intro}>We will help you <i class="bi bi-balloon-heart"></i></div>
         <div className={styles.lgbody}>
           <div className={styles.loginspace}>
             <div className={styles.LC}>

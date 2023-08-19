@@ -15,7 +15,7 @@
 .LC {
   position: absolute;
   background-color: rgb(255, 187, 39);
-  border: #3d3d3d 3px solid;
+  border: #000000 3px solid;
   box-shadow: 6px 7px #50505085;
   border-radius: 120%;
   padding-top: 40px;
@@ -30,7 +30,7 @@
 
 .LC h2 {
   position: relative;
-  color: #552618;
+  color: #2a0d04;
 
 }
 
@@ -93,7 +93,7 @@
   text-shadow:2px 4px  #ffffff;
   position: relative;
   left: 13%;
-  top:70px;
+  top:90px;
 
  
 }
@@ -102,7 +102,11 @@
   font-size: 30px;
   position: relative;
   color: #ff8d36;
-  top: 60px;
-  left: 26%;
+  top: 80px;
+  left: 22%;
   text-shadow:1px 3px  #ffffff;
+  letter-spacing: 1px;
+}
+.bi-balloon-heart {
+
 }
