@@ -82,3 +82,11 @@
     top: -13px;
 
 }
+
+.bi-arrows-angle-expand {
+
+    position: relative;
+    top: -250px;
+    left: 60px;
+    font-size: 18px;
+}
