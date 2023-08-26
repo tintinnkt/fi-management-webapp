@@ -1,26 +1,19 @@
-body {
 
-    font-family: 'Lilita One', cursive;
-    background-color: #FFFFE8;
-}
 
-.container {
-
-    width: 100%;
+.pcontainer {
+    width: 99%;
+    height: 100%;
     position: relative;
     justify-content: center;
-
-
 }
 
 .profile {
-    padding-top: 25px;
+    padding-top: 22px;
     text-align: center;
     padding-bottom: 10px;
 }
 
 .detail {
-    page-break-after: 10px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -36,28 +29,25 @@ body {
 
     font-family: 'Lilita One', cursive;
     font-size: 34px;
-    position: relative;
+    position: absolute;
     z-index: 100000000;
-    box-shadow: 3px 3px #FFFFE8;
-    left: 40%;
-    bottom: 100px;
+    box-shadow: 4px 4.5px #363636b4;
+    left: 43%;
+    text-align: center;
+    width: 120px;
 }
 
 
 
 .custom-icon {
-
     font-size: 70px;
     position: relative;
-    top: 0px;
 }
 
 
 .Name {
-
     font-size: 23.65px;
     position: relative;
-    top: 10px
 }
 
 .bar {
@@ -74,10 +64,7 @@ body {
     top: -10px;
     left: -40px;
     position: relative;
-    justify-content: center;
-    justify-items: center;
+    justify-content: flex-start;
     text-align: center;
-    width: 100%;
-    right: 10px;
-    padding-bottom: 20px;
+    width: 90%;
 }

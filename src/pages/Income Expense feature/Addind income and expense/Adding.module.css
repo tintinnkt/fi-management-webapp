@@ -1,8 +1,11 @@
 .aaa {
     position: relative;
-    padding-top: 100px;
+    padding-top: 120px;
     justify-content: center;
-    left: calc(2% + 10px);
+    text-align: center;
+    align-items: center;
+    padding-bottom: 10%;
+    display: flex;
 }
 .container {
 
@@ -13,11 +16,13 @@
     height: 530px;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    
 
 }
 
 .dropdown {
-    position: absolute;
+    position: relative;
     justify-content: center;
     left: 60px;
 }
@@ -27,12 +32,6 @@
     font-size: 36px;
     position: relative;
 }
-
-addDetail {
-    position: relative;
-    align-items: center;
-}
-
 
 .Date {
     padding-left: 62px;
@@ -45,7 +44,7 @@ addDetail {
 
     text-align: center;
     font-size: 30px;
-    width: 216.9px;
+    width: 226.9px;
     border-radius: 10px;
 
 
@@ -56,7 +55,7 @@ addDetail {
 
     text-align: center;
     font-size: 36px;
-    width: 216.9px;
+    width: 226.9px;
     border-radius: 10px;
     background-color: white;
     position: relative;
@@ -100,13 +99,16 @@ addDetail {
     background-color: #FFC033;
     border-radius: 5px;
     border: 1px solid black;
-    width: 144px;
+    width: 164px;
     height: 50px;
     font-family: 'Lilita One', cursive;
     font-size: 36px;
     position: relative;
     justify-content: center;
-    top: 20px;
-    left: 100px;
 
+}
+.send{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

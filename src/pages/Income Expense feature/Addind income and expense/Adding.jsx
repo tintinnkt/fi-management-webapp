@@ -17,7 +17,7 @@ function Adding() {
         setSelectedType(type);
         setSelectedLabel(label);
     };
-    
+
 
     const handleRecord = () => {
         const newData = {
@@ -28,41 +28,42 @@ function Adding() {
             name: selectedLabel,
             date: date.toISOString().split('T')[0],
         };
-    
+
         dt.push(newData);
         console.log('Collected Data:', newData);
-    
+
         document.querySelector(`.${styles.money}`).value = '';
         setDate(new Date());
     };
-    
+
 
     return (
         <>
-            <Topic text="Add Money Record"/>
+            <Topic text="Add Money Record" />
             <Returnbtn url="/" />
             <div className={styles.aaa}>
-            <div className={styles.container}>
-                <div className={styles.Howmuch}>How much ?</div>
-                <div className={styles.dropdown}>
+                <div className={styles.container}>
+                    <div className={styles.Howmuch}>How much ?</div>
+                    <div className={styles.dropdown}>
 
-                    <AddSelector onSelect={handleOptionSelect} />
+                        <AddSelector onSelect={handleOptionSelect} />
+                    </div>
+                    <input className={styles.money} type="number" placeholder="Amount" />
+
+                    <div className={styles.Date}>
+                        <DatePicker
+                            className={styles.calender}
+                            selected={date}
+                            onChange={newDate => setDate(newDate)}
+                            style={{ fontSize: '10px' }}
+                        />
+                    </div>
                 </div>
-                <input className={styles.money} type="number" placeholder="Amount" />
 
-                <div className={styles.Date}>
-                    <DatePicker
-                        className={styles.calender}
-                        selected={date}
-                        onChange={newDate => setDate(newDate)}
-                        style={{ fontSize: '10px' }}
-                    />
-                </div>
             </div>
-
-            <button className={styles.rec} onClick={handleRecord}>Submit</button>
-            </div>
-        </>
+            <div className={styles.send}>
+                <button className={styles.rec} onClick={handleRecord}>Record</button>
+            </div></>
     );
 }
 
