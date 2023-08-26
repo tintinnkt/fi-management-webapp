@@ -58,7 +58,7 @@ const Home = () => {
         <div className="rec-con">
       <div className="spending-rec">Spending Record</div>
       <div className="rec-body">
-          <BarGraph />
+          {/* <BarGraph /> */}
       </div>
         </div>
 

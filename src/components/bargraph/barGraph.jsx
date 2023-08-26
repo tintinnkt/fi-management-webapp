@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
 import dt from '../../service/data/Record.json';
 
-// Helper function to get month name from month number
 function getMonthName(month) {
     const months = [
         'January', 'February', 'March', 'April', 'May', 'June',
@@ -12,30 +11,40 @@ function getMonthName(month) {
 }
 
 function BarGraph() {
-    // Group data by month and type (income/need/want)
-    const groupedData = dt.reduce((acc, entry) => {
-        const date = new Date(entry.date);
-        const month = date.getMonth();
-        const year = date.getFullYear();
-        const category = entry.type === 'income' ? 'income' : 'expense';
+    const [chartData, setChartData] = useState([]);
 
-        const key = `${year}-${month}`;
-        if (!acc[key]) {
-            acc[key] = {
-                month: `${year}-${month}`,
-                income: 0,
-                expense: 0,
-            };
-        }
+    useEffect(() => {
+        const groupedData = dt.reduce((acc, entry) => {
+            const date = new Date(entry.date);
+            const month = date.getMonth();
+            const year = date.getFullYear();
+            const category = entry.type === 'income' ? 'income' : 'expense';
 
-        acc[key][category] += entry.amount;
-        return acc;
-    }, {});
+            const my = `${year}-${month}`;
+            if (!acc[my]) {
+                acc[my] = {
+                    month: `${year}-${month}`,
+                    income: 0,
+                    expense: 0,
+                };
+            }
 
-    // Convert grouped data object into an array
-    const chartData = Object.values(groupedData);
+            acc[my][category] += entry.amount;
+            return acc;
+        }, [dt]);
 
-    // Define options for the chart
+        const formattedData = Object.values(groupedData).map(({ month, income, expense }) => {
+            const [year, monthNum] = month.split('-');
+            const monthName = getMonthName(parseInt(monthNum, 10));
+            return [`${year}-${monthName}`, income, expense];
+        });
+
+        setChartData([
+            ['Month', 'Income', 'Expense'],
+            ...formattedData,
+        ]);
+    }, []);
+
     const options = {
         title: 'Income and Expenses Comparison',
         hAxis: {
@@ -48,14 +57,8 @@ function BarGraph() {
         legend: {
             position: 'top',
         },
+        bar: { groupWidth: '40%' },
     };
-
-    // Format labels to include month name
-    const chartFormattedData = chartData.map(({ month, income, expense }) => {
-        const [year, monthNum] = month.split('-');
-        const monthName = getMonthName(parseInt(monthNum, 10));
-        return [`${year}-${monthName}`, income, expense];
-    });
 
     return (
         <div className="graph-container">
@@ -63,10 +66,7 @@ function BarGraph() {
                 chartType="BarChart"
                 width="100%"
                 height="400px"
-                data={[
-                    ['Month', 'Income', 'Expense'],
-                    ...chartFormattedData,
-                ]}
+                data={chartData}
                 options={options}
             />
         </div>

@@ -40,7 +40,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
       <div className={styles.lgbg}>
         <div className={styles.welcome}>WELCOME</div>
-        <div className={styles.intro}>We will help you<i class="bi bi-balloon-heart"/></div>
+        <div className={styles.intro}>We will help you<i className="bi bi-balloon-heart"/></div>
         <div className={styles.lgbody}>
           <div className={styles.loginspace}>
             <div className={styles.LC}>
