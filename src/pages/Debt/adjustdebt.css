@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Lilita+One&display=swap');
+
+body {
+    font-family: 'Lilita One', cursive;
+    font-size: 30px;
+    background-color: #FEE9B1;
+}
+
+.adjust-container {
+    background-color: white;
+    text-align: center;
+    height: 780px;
+    position: relative;
+    top: 50px;
+    width: 80%;
+    left: 10%;
+    border-radius: 10px;
+    border: 2px solid #FFC033;
+}
+
+.add {
+
+    border: 2px solid black;
+    width: 200px;
+   
+    border-radius: 10px;
+}
+
+.Name {
+    position: relative;
+    top: 305px;
+    font-size: 30px;
+}
+
+.Total {
+    position: relative;
+    top: 310px;
+    font-size: 25px;
+}
+
+.Deadline {
+    position: relative;
+    top: 310px;
+    font-size: 25px;
+}
+
+.Arrear {
+    position: relative;
+    top: 315px;
+    font-size: 30px;
+}
+
+.Add {
+    position: relative;
+    top: 340px;
+    font-size: 35px;
+}
+
+.add {
+    position: relative;
+    top: 360px;
+    height: 40px;
+}
+
+.record {
+
+    font-family: 'Lilita One', cursive;
+    background-color: #FFC033;
+    border-radius: 5px;
+    position: absolute;
+    font-size: 35px;
+    top: 680px;
+    left: 27.5%;
+    width: 140px;
+    height: 50px;
+}
