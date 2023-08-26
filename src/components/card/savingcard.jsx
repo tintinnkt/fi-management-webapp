@@ -16,6 +16,7 @@ function Savingcard({ prop }) {
       </div>
       <div className="Goal">Goal : {prop.goal}</div>
       <div className="Recent">Current : {prop.current}</div>
+      <i class="bi bi-arrows-angle-expand"></i>
     </div>
   );
 }
