@@ -54,7 +54,7 @@ function BarGraph() {
     const chartFormattedData = chartData.map(({ month, income, expense }) => {
         const [year, monthNum] = month.split('-');
         const monthName = getMonthName(parseInt(monthNum, 10));
-        return [`${year}-${monthNum} \n${monthName}`, income, expense];
+        return [`${year}-${monthName}`, income, expense];
     });
 
     return (
