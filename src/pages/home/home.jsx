@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './home.css'; // Import the CSS file if using this JSX in a React component
 
 import dt from '../../service/data/Record.json';
+import BarGraph from '../../components/bargraph/barGraph';
 import NavigationBar from '../../components/navbar/nav'
 import SpendingTypeCard from '../../components/card/SpendingTypeCard';
 
@@ -56,7 +57,9 @@ const Home = () => {
       <div className="home-con">
         <div className="rec-con">
       <div className="spending-rec">Spending Record</div>
-      <div className="rec-body"></div>
+      <div className="rec-body">
+          <BarGraph />
+      </div>
         </div>
 
       <div className="spending-detail">Spending Detail
