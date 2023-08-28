@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'react-google-charts';
-import dt from '../../service/data/Record.json';
 
 function getMonthName(month) {
     const months = [
@@ -10,16 +9,17 @@ function getMonthName(month) {
     return months[month];
 }
 
-function BarGraph() {
+function BarGraph(data) {
     const [chartData, setChartData] = useState([]);
+    
 
     useEffect(() => {
-        const groupedData = dt.reduce((acc, entry) => {
+        const groupedData = data.reduce((acc, entry) => {
             const date = new Date(entry.date);
             const month = date.getMonth();
             const year = date.getFullYear();
             const category = entry.type === 'income' ? 'income' : 'expense';
-
+            //my = month and year
             const my = `${year}-${month}`;
             if (!acc[my]) {
                 acc[my] = {
@@ -31,12 +31,12 @@ function BarGraph() {
 
             acc[my][category] += entry.amount;
             return acc;
-        }, [dt]);
+        }, []);
 
         const formattedData = Object.values(groupedData).map(({ month, income, expense }) => {
             const [year, monthNum] = month.split('-');
             const monthName = getMonthName(parseInt(monthNum, 10));
-            return [`${year}-${monthName}`, income, expense];
+            return [`${year}\n${monthName}`, income, expense];
         });
 
         setChartData([

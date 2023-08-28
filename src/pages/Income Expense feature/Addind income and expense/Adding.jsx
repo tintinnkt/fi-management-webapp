@@ -1,14 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState ,useContext} from 'react';
 import DatePicker from 'react-datepicker';
 import styles from './Adding.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
-import dt from '../../../service/data/Record.json'
+
+import { db } from '../../../utilities/firebase-config';
+import { addDoc, collection, doc, getDocs } from 'firebase/firestore';
+import { AuthContext } from '../../../App';
 //component
 import Topic from '../../../components/topic/topic';
 import Returnbtn from '../../../components/returnBtn/returnbtn';
 import AddSelector from '../../../components/selector/AddSelector';
 
 function Adding() {
+    const profile = useContext(AuthContext);
+    const [transaction, setTransaction] = useState("");
+    const AddTr = async (transactionData) => {
+        try {
+            const docRef = await addDoc(collection(db, "transaction"), transactionData);
+            console.log("Doc written ID:", docRef.id);
+        } catch (e) {
+            console.error("Error adding transaction:", e);
+        }
+    };
+
+
+
+
     const [date, setDate] = useState(new Date());
     const [selectedType, setSelectedType] = useState(null);
     const [selectedLabel, setSelectedLabel] = useState(null);
@@ -19,22 +36,25 @@ function Adding() {
     };
 
 
-    const handleRecord = () => {
-        const newData = {
-            id: dt.length + 1, // Generating an ID based on current data length
-            userID: 123, // Replace with actual user ID
-            amount: parseFloat(document.querySelector(`.${styles.money}`).value),
-            type: selectedType,
-            name: selectedLabel,
-            date: date.toISOString().split('T')[0],
-        };
-
-        dt.push(newData);
-        console.log('Collected Data:', newData);
-
-        document.querySelector(`.${styles.money}`).value = '';
-        setDate(new Date());
+    const handleRecord = async () => {
+        try {
+            const newData = {
+                userID: profile.googleId, // Replace with actual user ID
+                amount: parseFloat(document.querySelector(`.${styles.money}`).value),
+                type: selectedType,
+                name: selectedLabel,
+                date: date.toISOString().split('T')[0],
+            };
+    
+            await AddTr(newData); // Call the AddTr function with the new data
+    
+            document.querySelector(`.${styles.money}`).value = '';
+            setDate(new Date());
+        } catch (error) {
+            console.error("Error adding transaction TT:", error);
+        }
     };
+    
 
 
     return (
