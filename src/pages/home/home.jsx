@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './home.css';
 import { AuthContext } from '../../App';
 import { db } from '../../utilities/firebase-config';
-import { addDoc, collection, getDocs } from 'firebase/firestore';
+import {  collection, getDocs } from 'firebase/firestore';
 
 import dt from '../../service/data/Record.json';
 import BarGraph from '../../components/bargraph/barGraph';
@@ -11,8 +11,8 @@ import NavigationBar from '../../components/navbar/nav'
 import SpendingTypeCard from '../../components/card/SpendingTypeCard';
 
 const Home = () => {
-  const profile= useContext(AuthContext);
-  const userID =profile.googleId
+  const profile = useContext(AuthContext);
+  const userID = profile.googleId
   const [Tr, setTr] = useState([]);
 
   const fetchTr = async () => {
@@ -27,9 +27,7 @@ const Home = () => {
     });
   };
 
-useEffect(() => {
-  fetchTr();
-}, [profile]);
+  useEffect(() => { fetchTr(); }, [profile]);
 
   //! from /service/data/userRecord.json
 

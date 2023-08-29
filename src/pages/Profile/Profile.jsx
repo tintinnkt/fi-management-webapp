@@ -2,6 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../App';
 import styles from './Profile.module.css';
 import dt from '../../service/data/Record.json';
+import { db } from '../../utilities/firebase-config';
+
+//component
 import NavigationBar from '../../components/navbar/nav';
 import PieChart from '../../components/pie/PieChart';
 import { ProgressBar } from 'react-bootstrap';
@@ -10,7 +13,22 @@ import Returnbtn from '../../components/returnBtn/returnbtn';
 
 const ProfileC = ({ logOut }) => {
   const profile = useContext(AuthContext);
+  const userID = profile.googleId
   const [isLoading, setIsLoading] = useState(true);
+    const [Tr, setTr] = useState([]);
+
+    const fetchTr = async () =>{
+        await getDocs(collection(db,"transaction")).then((querySnapshot)=>{
+            const newTr = querySnapshot.docs.filter((doc)=>{
+                return doc.data().userID ===userID
+            }).map((doc)=>({
+                ...doc.data(),
+                id: doc.id,
+            }))
+            setTr(newTr)
+        })
+    }
+    useEffect(()=>{fetchTr()},[profile])
 
   // Function to calculate sum by type and user
   const calculateSumByTypeAndUser = (data, type, userID) => {
@@ -22,7 +40,6 @@ const ProfileC = ({ logOut }) => {
     }, 0);
   };
 
-  const userID = 123; // Replace with the actual user ID
   const totalIncome = calculateSumByTypeAndUser(dt, 'income', userID);
   const totalWant = calculateSumByTypeAndUser(dt, 'want', userID);
   const totalNeed = calculateSumByTypeAndUser(dt, 'need', userID);

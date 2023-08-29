@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import data from '../../../service/data/Record.json';
+import { AuthContext } from '../../../App';
+import { db } from '../../../utilities/firebase-config';
+import { collection, getDocs, query } from 'firebase/firestore';
 import './history.css'
 
 //components
@@ -8,8 +11,25 @@ import HistoryCard from '../../../components/card/HistoryCard'
 import Returnbtn from '../../../components/returnBtn/returnbtn';
 
 function History() {
-    const [filteredData, setFilteredData] = useState(data.filter((rec) => rec.userID === 123));
-    filteredData.sort((b, a) => new Date(a.date) - new Date(b.date));
+    const profile = useContext(AuthContext);
+    const userID = profile.googleId
+    const [Tr, setTr] = useState([]);
+
+    const fetchTr = async () =>{
+        await getDocs(collection(db,"transaction")).then((querySnapshot)=>{
+            const newTr = querySnapshot.docs.filter((doc)=>{
+                return doc.data().userID ===userID
+            }).map((doc)=>({
+                ...doc.data(),
+                id: doc.id,
+            }))
+            setTr(newTr)
+        })
+    }
+    useEffect(()=>{fetchTr()},[profile])
+
+
+    Tr.sort((b, a) => new Date(a.date) - new Date(b.date));
     const bgColor = ['#FA5555', '#F7F48B', '#A2EF44'];
     return (
         <React.Fragment>
@@ -24,7 +44,7 @@ function History() {
 
             </div>
             <div className="his-container">
-                {filteredData.map((rec) => (
+                {Tr.map((rec) => (
                     <HistoryCard prop={rec} />
                 ))}
             </div>
