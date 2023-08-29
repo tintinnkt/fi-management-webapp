@@ -31,18 +31,18 @@ const Home = () => {
 
   //! from /service/data/userRecord.json
 
-  const calculateSumByTypeAndUser = (data, type, userID) => {
+  const calculateSumByTypeAndUser = (data, type) => {
     return data.reduce((total, item) => {
-      if (item.type === type && item.userID === userID) {
+      if (item.type === type ) {
         return total + item.amount;
       }
       return total;
     }, 0);
   };
 
-  const totalIncome = calculateSumByTypeAndUser(Tr, 'income', userID);
-  const totalWant = calculateSumByTypeAndUser(Tr, 'want', userID);
-  const totalNeed = calculateSumByTypeAndUser(Tr, 'need', userID);
+  const totalIncome = calculateSumByTypeAndUser(Tr, 'income');
+  const totalWant = calculateSumByTypeAndUser(Tr, 'want');
+  const totalNeed = calculateSumByTypeAndUser(Tr, 'need');
   // Filter the data for 'want' and 'need' expense types
   const wantAndNeedData = Tr.filter(item => (item.type === 'want' || item.type === 'need'));
   const totalExpense = totalNeed + totalWant
