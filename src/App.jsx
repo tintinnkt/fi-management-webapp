@@ -18,7 +18,7 @@ import Login from './pages/login/login'
 import RestrictedPage from './components/restricted/restrictedpage'
 
 function App() {
-  const [ auth, setAuth ] = useState(null);
+  const [ auth, setAuth ] = useState(false);
 
 
   return (
@@ -38,7 +38,6 @@ function App() {
             responseGoogleSuccess={(res) => {
               if(auth) return;
               else setAuth(res);
-              console.log("Hello "+`${res.googleId}`)
             }}
 
             

@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './home.css'; // Import the CSS file if using this JSX in a React component
+import './home.css';
+import { AuthContext } from '../../App';
+import { db } from '../../utilities/firebase-config';
+import { addDoc, collection, getDocs } from 'firebase/firestore';
 
 import dt from '../../service/data/Record.json';
 import BarGraph from '../../components/bargraph/barGraph';
@@ -8,6 +11,25 @@ import NavigationBar from '../../components/navbar/nav'
 import SpendingTypeCard from '../../components/card/SpendingTypeCard';
 
 const Home = () => {
+  const profile= useContext(AuthContext);
+  const userID =profile.googleId
+  const [Tr, setTr] = useState([]);
+
+  const fetchTr = async () => {
+    await getDocs(collection(db, "transaction")).then((querySnapshot) => {
+      const newTr = querySnapshot.docs.filter((doc) => {
+        return doc.data().userID === profile.googleId;
+      }).map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setTr(newTr);
+    });
+  };
+
+useEffect(() => {
+  fetchTr();
+}, [profile]);
 
   //! from /service/data/userRecord.json
 
@@ -20,12 +42,11 @@ const Home = () => {
     }, 0);
   };
 
-  const userID = 123; // Replace with the actual user ID
-  const totalIncome = calculateSumByTypeAndUser(dt, 'income', userID);
-  const totalWant = calculateSumByTypeAndUser(dt, 'want', userID);
-  const totalNeed = calculateSumByTypeAndUser(dt, 'need', userID);
+  const totalIncome = calculateSumByTypeAndUser(Tr, 'income', userID);
+  const totalWant = calculateSumByTypeAndUser(Tr, 'want', userID);
+  const totalNeed = calculateSumByTypeAndUser(Tr, 'need', userID);
   // Filter the data for 'want' and 'need' expense types
-  const wantAndNeedData = dt.filter(item => (item.type === 'want' || item.type === 'need'));
+  const wantAndNeedData = Tr.filter(item => (item.type === 'want' || item.type === 'need'));
   const totalExpense = totalNeed + totalWant
 
 
@@ -56,22 +77,23 @@ const Home = () => {
       </div>
       <div className="home-con">
         <div className="rec-con">
-      <div className="spending-rec">Spending Record</div>
-      <div className="rec-body">
-          {/* <BarGraph /> */}
-      </div>
+          <div className="spending-rec">Spending Record</div>
+          <div className="rec-body">
+            {/* <BarGraph data={dt}/> */}
+
+          </div>
         </div>
 
-      <div className="spending-detail">Spending Detail
-        <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={() => { }} /></Link>
-      </div>
-      <div className="spending-con">
-      {groupedValues.map((rec) => (
-        <div className="spending">
-          <SpendingTypeCard prop={rec} total={totalExpense} />
+        <div className="spending-detail">Spending Detail
+          <Link to="/history" href="" className='his-img'><img src="https://cdn-icons-png.flaticon.com/512/9485/9485945.png " alt="history" className='his-img' onClick={() => { }} /></Link>
         </div>
-      ))}
-      </div>
+        <div className="spending-con">
+          {groupedValues.map((rec) => (
+            <div className="spending">
+              <SpendingTypeCard prop={rec} total={totalExpense} />
+            </div>
+          ))}
+        </div>
 
         <NavigationBar />
 

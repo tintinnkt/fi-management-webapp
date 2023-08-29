@@ -23,6 +23,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
 
   const handleGoogleLoginFailure = (response) => {
     console.log("FAIL");
+    
   };
 
   useEffect(() => {

@@ -17,7 +17,7 @@ function Adding() {
     const AddTr = async (transactionData) => {
         try {
             const docRef = await addDoc(collection(db, "transaction"), transactionData);
-            console.log("Doc written ID:", docRef.id);
+            console.log("Doc written ID:", docRef.id );
         } catch (e) {
             console.error("Error adding transaction:", e);
         }
