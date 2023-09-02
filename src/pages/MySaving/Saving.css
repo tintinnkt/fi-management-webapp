@@ -1,23 +1,9 @@
-
-body {
-
-    font-family: 'Lilita One', cursive;
-}
- 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
-
-}
-
-
 .row2 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 100px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
 
 }
 
@@ -58,13 +44,13 @@ body {
 
 
 .vertical-line {
-    width: 1px;
-    height: 735px;
-    background-color: black;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: -672px;
-    z-index: 1;
+  width: 1px;
+  height: 735px;
+  background-color: black;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -672px;
+  z-index: 1;
 
 }

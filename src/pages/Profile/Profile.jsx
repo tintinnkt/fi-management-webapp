@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../App';
 import styles from './Profile.module.css';
-import dt from '../../service/data/Record.json';
+import { AuthContext } from '../../App';
 import { db } from '../../utilities/firebase-config';
+import { collection,getDocs } from 'firebase/firestore';
 
 //component
 import NavigationBar from '../../components/navbar/nav';
@@ -15,19 +15,21 @@ const ProfileC = ({ logOut }) => {
   const profile = useContext(AuthContext);
   const userID = profile.googleId
   const [isLoading, setIsLoading] = useState(true);
-    const [Tr, setTr] = useState([]);
+  const [Tr, setTr] = useState([]);
 
-    const fetchTr = async () =>{
-        await getDocs(collection(db,"transaction")).then((querySnapshot)=>{
-            const newTr = querySnapshot.docs.filter((doc)=>{
-                return doc.data().userID ===userID
-            }).map((doc)=>({
-                ...doc.data(),
-                id: doc.id,
-            }))
-            setTr(newTr)
-        })
-    }
+    const fetchTr = async () => {
+      await getDocs(collection(db, "transaction")).then((querySnapshot) => {
+        const newTr = querySnapshot.docs.filter((doc) => {
+          return doc.data().userID === profile.googleId;
+        }).map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setTr(newTr);
+        // console.log(newTr)
+        console.log(Tr)
+      });
+    };
     useEffect(()=>{fetchTr()},[profile])
 
   // Function to calculate sum by type and user
@@ -40,10 +42,10 @@ const ProfileC = ({ logOut }) => {
     }, 0);
   };
 
-  const totalIncome = calculateSumByTypeAndUser(dt, 'income', userID);
-  const totalWant = calculateSumByTypeAndUser(dt, 'want', userID);
-  const totalNeed = calculateSumByTypeAndUser(dt, 'need', userID);
-  const wantAndNeedData = dt.filter(item => item.type === 'want' || item.type === 'need');
+  const totalIncome = calculateSumByTypeAndUser(Tr, 'income', userID);
+  const totalWant = calculateSumByTypeAndUser(Tr, 'want', userID);
+  const totalNeed = calculateSumByTypeAndUser(Tr, 'need', userID);
+  const wantAndNeedData = Tr.filter(item => item.type === 'want' || item.type === 'need');
 
   const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com";
 
