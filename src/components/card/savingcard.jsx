@@ -12,7 +12,7 @@ function Savingcard({ prop }) {
       <div className="Name">{prop.name}</div>
       <div className="perc">
         <div className="bar"><ProgressBar now={percent} label={`${percent}%`} /></div>
-        <div className="p-label">| {percent}%</div>
+        <div className="p-label"> {percent}%</div>
       </div>
       <div className="Goal">Goal : {prop.goal}</div>
       <div className="Recent">Current : {prop.current}</div>

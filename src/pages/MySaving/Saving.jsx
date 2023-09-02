@@ -3,7 +3,7 @@ import dt from '../../service/data/SavingUser.json';
 import './Saving.css';
 import { AuthContext } from '../../App';
 import { db } from '../../utilities/firebase-config';
-import { collection,getDocs } from 'firebase/firestore';
+import { addDoc, collection,getDocs } from 'firebase/firestore';
 //components
 import Savingcard from '../../components/card/savingcard';
 import Topic from '../../components/topic/topic';
@@ -15,7 +15,7 @@ function Saving() {
   const profile = useContext(AuthContext);
   const userID = profile.googleId
   const [saveBox,setSaveBox]=useState([]);
-  const fetchTr = async () => {
+  const fetchSave = async () => {
     await getDocs(collection(db, "Savingbox")).then((querySnapshot) => {
       const newSavebox = querySnapshot.docs.filter((doc) => {
         return doc.data().userID ===userID
@@ -24,14 +24,23 @@ function Saving() {
         id: doc.id,
       }));
       setSaveBox(newSavebox);
-      console.log(newSavebox)
-      console.log(saveBox)
+      // console.log(newSavebox)
+      // console.log(saveBox)
     });
   };
-  useEffect(()=>{fetchTr()},[profile])
+  const AddSave =
+  useEffect(()=>{fetchSave()},[profile])
 
-  const handleAddSaving = (newSaving) => {
+  const handleAddSaving = async (newSaving) => {
     setSaveBox((prevData) => [...prevData, newSaving]);
+    try{
+      newSaving
+      const docRef = await addDoc(collection(db, "Savingbox"),newSaving)
+      console.log("Saving ID: ",docRef.id)
+      fetchSave()
+    }catch(e){
+      console.error("Error adding SavingBox",e)
+    }
   };
 
   const handleEditSaving = (id, updatedData) => {

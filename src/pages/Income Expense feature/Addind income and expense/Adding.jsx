@@ -13,7 +13,6 @@ import AddSelector from '../../../components/selector/AddSelector';
 
 function Adding() {
     const profile = useContext(AuthContext);
-    const [transaction, setTransaction] = useState("");
     const AddTr = async (transactionData) => {
         try {
             const docRef = await addDoc(collection(db, "transaction"), transactionData);

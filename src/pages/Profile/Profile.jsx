@@ -20,7 +20,7 @@ const ProfileC = ({ logOut }) => {
     const fetchTr = async () => {
       await getDocs(collection(db, "transaction")).then((querySnapshot) => {
         const newTr = querySnapshot.docs.filter((doc) => {
-          return doc.data().userID === profile.googleId;
+          return doc.data().userID === userID;
         }).map((doc) => ({
           ...doc.data(),
           id: doc.id,
@@ -33,18 +33,15 @@ const ProfileC = ({ logOut }) => {
     useEffect(()=>{fetchTr()},[profile])
 
   // Function to calculate sum by type and user
-  const calculateSumByTypeAndUser = (data, type, userID) => {
+  const calculateSumByTypeAndUser = (data, type) => {
     return data.reduce((total, item) => {
-      if (item.type === type && item.userID === userID) {
-        return total + item.amount;
-      }
-      return total;
+      return (item.type === type) ? total + item.amount :total
     }, 0);
   };
 
-  const totalIncome = calculateSumByTypeAndUser(Tr, 'income', userID);
-  const totalWant = calculateSumByTypeAndUser(Tr, 'want', userID);
-  const totalNeed = calculateSumByTypeAndUser(Tr, 'need', userID);
+  const totalIncome = calculateSumByTypeAndUser(Tr, 'income');
+  const totalWant = calculateSumByTypeAndUser(Tr, 'want');
+  const totalNeed = calculateSumByTypeAndUser(Tr, 'need',);
   const wantAndNeedData = Tr.filter(item => item.type === 'want' || item.type === 'need');
 
   const clientId = "831352639707-shhtm34vua2bbiibnt88j86lu8fi2bpb.apps.googleusercontent.com";

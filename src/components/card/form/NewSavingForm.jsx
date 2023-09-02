@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../../App';
 import './NewForm.css'
 
 function SavingForm({ onSave }) {
+    const profile=useContext(AuthContext)
     const [showForm, setShowForm] = useState(false);
     const [name, setName] = useState('');
     const [goal, setGoal] = useState(0);
@@ -10,13 +12,13 @@ function SavingForm({ onSave }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newSaving = {
-            id: Date.now(),
-            userid: 101, // Set the user ID
+            userID: profile.googleId,
             name,
-            goal,
-            current,
+            goal : parseInt(goal),
+            current : parseInt(current),
         };
         onSave(newSaving);
+        console.log(newSaving)
         setName('');
         setGoal(0);
         setCurrent(0);
