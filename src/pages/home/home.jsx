@@ -5,7 +5,6 @@ import { AuthContext } from '../../App';
 import { db } from '../../utilities/firebase-config';
 import {  collection, getDocs } from 'firebase/firestore';
 
-import dt from '../../service/data/Record.json';
 import BarGraph from '../../components/bargraph/barGraph';
 import NavigationBar from '../../components/navbar/nav'
 import SpendingTypeCard from '../../components/card/SpendingTypeCard';
@@ -77,7 +76,7 @@ const Home = () => {
         <div className="rec-con">
           <div className="spending-rec">Spending Record</div>
           <div className="rec-body">
-            {/* <BarGraph data={dt}/> */}
+            {/* <BarGraph data={Tr}/> */}
 
           </div>
         </div>
