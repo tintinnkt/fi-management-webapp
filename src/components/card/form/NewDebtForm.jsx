@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { AuthContext } from '../../../App';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import './NewForm.css'; // Import your CSS file for styling
+import './NewForm.css';
 
 function NewDebtForm({ onCreate }) {
+  const profile = useContext(AuthContext)
   const [showForm, setShowForm] = useState(false);
   const [name, setName] = useState('');
   const [total, setTotal] = useState(0);
-  const [deadline, setDeadline] = useState(new Date()); // Initialize with today's date
+  const [deadline, setDeadline] = useState(new Date());
   const [arrear, setArrear] = useState(0);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newDebt = {
       id: Date.now(),
-      userID: 102,
+      userID: profile.googleId,
       name,
       total,
       deadline,
@@ -26,6 +28,7 @@ function NewDebtForm({ onCreate }) {
     setDeadline(new Date());
     setArrear(0);
     setShowForm(false);
+    console.log("newDebt add")
   };
 
   return (

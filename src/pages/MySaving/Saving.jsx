@@ -24,11 +24,8 @@ function Saving() {
         id: doc.id,
       }));
       setSaveBox(newSavebox);
-      // console.log(newSavebox)
-      // console.log(saveBox)
     });
   };
-  const AddSave =
   useEffect(()=>{fetchSave()},[profile])
 
   const handleAddSaving = async (newSaving) => {
@@ -37,7 +34,6 @@ function Saving() {
       newSaving
       const docRef = await addDoc(collection(db, "Savingbox"),newSaving)
       console.log("Saving ID: ",docRef.id)
-      fetchSave()
     }catch(e){
       console.error("Error adding SavingBox",e)
     }

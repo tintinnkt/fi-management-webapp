@@ -18,7 +18,7 @@ function SavingForm({ onSave }) {
             current : parseInt(current),
         };
         onSave(newSaving);
-        console.log(newSaving)
+        console.log("newSaving Add")
         setName('');
         setGoal(0);
         setCurrent(0);
