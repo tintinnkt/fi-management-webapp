@@ -11,7 +11,6 @@ import SpendingTypeCard from '../../components/card/SpendingTypeCard';
 
 const Home = () => {
   const profile = useContext(AuthContext);
-  const userID = profile.googleId
   const [Tr, setTr] = useState([]);
 
   const fetchTr = async () => {
@@ -23,6 +22,7 @@ const Home = () => {
         id: doc.id,
       }));
       setTr(newTr);
+
     });
   };
 
@@ -58,7 +58,7 @@ const Home = () => {
     result[item.name].totalAmount += item.amount;
     return result;
   }, {});
-
+1
   const groupedValues = Object.values(groupedData);
   groupedValues.sort((a, b) => b.totalAmount - a.totalAmount);
 
@@ -74,9 +74,9 @@ const Home = () => {
       </div>
       <div className="home-con">
         <div className="rec-con">
-          <div className="spending-rec">Spending Record</div>
+          <div className="spending-rec">Transaction Record</div>
           <div className="rec-body">
-            {/* <BarGraph data={Tr}/> */}
+            <BarGraph data={Tr}/>
 
           </div>
         </div>

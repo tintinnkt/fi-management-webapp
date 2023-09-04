@@ -15,7 +15,7 @@ function DebtCard({ prop }) {
         <div className="Total">Total : {prop.total}</div>
         <div className="Arrear">Arrear : {prop.arrear}</div>
         <div className="Deadline">Deadline: {format(date, 'dd/MM/yyyy')}</div>
-        <i className="bi bi-arrows-angle-expand" />
+        {/* <i className="bi bi-arrows-angle-expand" /> */}
       </div>
     </>
   )

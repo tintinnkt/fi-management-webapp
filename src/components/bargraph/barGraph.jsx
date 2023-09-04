@@ -9,55 +9,67 @@ function getMonthName(month) {
     return months[month];
 }
 
-function BarGraph(data) {
+function BarGraph({ data }) {
     const [chartData, setChartData] = useState([]);
-    
 
-    useEffect(() => {
-        const groupedData = data.reduce((acc, entry) => {
-            const date = new Date(entry.date);
-            const month = date.getMonth();
-            const year = date.getFullYear();
-            const category = entry.type === 'income' ? 'income' : 'expense';
-            //my = month and year
-            const my = `${year}-${month}`;
-            if (!acc[my]) {
-                acc[my] = {
-                    month: `${year}-${month}`,
-                    income: 0,
-                    expense: 0,
-                };
+    const processData = (data) => {
+        const monthData = {};
+
+        data.forEach(item => {
+            const date = new Date(item.date);
+            const monthYear = `${date.getFullYear()}-${date.getMonth()}`;
+            const amount = parseFloat(item.amount);
+
+            if (item.type === 'income') {
+                if (monthData[monthYear]) {
+                    monthData[monthYear].income += amount;
+                } else {
+                    monthData[monthYear] = { income: amount, expenses: 0 };
+                }
+            } else {
+                if (monthData[monthYear]) {
+                    monthData[monthYear].expenses += amount;
+                } else {
+                    monthData[monthYear] = { income: 0, expenses: amount };
+                }
             }
-
-            acc[my][category] += entry.amount;
-            return acc;
-        }, []);
-
-        const formattedData = Object.values(groupedData).map(({ month, income, expense }) => {
-            const [year, monthNum] = month.split('-');
-            const monthName = getMonthName(parseInt(monthNum, 10));
-            return [`${year}\n${monthName}`, income, expense];
         });
 
-        setChartData([
-            ['Month', 'Income', 'Expense'],
-            ...formattedData,
-        ]);
-    }, []);
+        const chartData = [['Month', 'Income', 'Expenses']];
+        for (const key in monthData) {
+            const [year, month] = key.split('-');
+            chartData.push([`${getMonthName(parseInt(month))} ${year}`, monthData[key].income, monthData[key].expenses]);
+        }
+
+        return chartData;
+    };
+
+    useEffect(() => {
+        const processedData = processData(data);
+        setChartData(processedData);
+        console.log(chartData)
+    }, [data]);
 
     const options = {
-        title: 'Income and Expenses Comparison',
+        title: '',
+        titleTextStyle: {
+            fontSize: 12,
+        },
         hAxis: {
-            title: 'Month',
+            title: 'Amount',
         },
         vAxis: {
-            title: 'Amount',
+            title: 'Month',
             minValue: 0,
         },
         legend: {
             position: 'top',
         },
-        bar: { groupWidth: '40%' },
+        bar: { groupWidth: '75%' },
+        series: {
+            0: { color: '#25a18e' },
+            1: { color: '#ef6351' },
+        },
     };
 
     return (
@@ -65,10 +77,10 @@ function BarGraph(data) {
             <Chart
                 chartType="BarChart"
                 width="100%"
-                height="400px"
+                height="350px"
                 data={chartData}
                 options={options}
-            />
+                />
         </div>
     );
 }
