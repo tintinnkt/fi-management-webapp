@@ -7,6 +7,7 @@ function DevCard() {
     const dev = [
         {
             username: "Tintinnkt",
+            name: "Krittin Tragunejindarat",
             email: "itin752@gmail.com",
             devIcon: "https://i.pinimg.com/564x/d6/d6/d1/d6d6d19dc427f7e669a7064bb10fbbb8.jpg",
             devFB: "https://www.facebook.com/krittin.tragunejindarat/",
@@ -16,6 +17,7 @@ function DevCard() {
         },
         {
             username: "Thanathad",
+            name: "Thanathad Kalmonsamritichai",
             email: "",
             devIcon: "https://inwfile.com/s-p/091l5y.jpg",
             devFB: "",
@@ -39,6 +41,7 @@ function DevCard() {
                     <div className="dev-body">
                         <div className="dev-detail">
                             <div className="devname">{dev[user].username} <div className="chn-cover"><button type="button" className="btn btn-outline-warning"  onClick={changeUser}> change</button></div></div>
+                            {dev[user].name ? <div className='email'>{dev[user].name}</div>:null}
                             {dev[user].email ? <div className="email">{dev[user].email}</div> : null}
                             {dev[user].description ? <div className="dev-des">{dev[user].description}</div> : null}
                         </div>

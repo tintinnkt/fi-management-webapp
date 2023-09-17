@@ -1,11 +1,17 @@
+.save-con{
+    width: 45%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 250px;
+    top: -25px;
+}
 .savecard {
     position: relative;
-    top: -25px;
-    width: 45%;
-    margin: 5px;
+    
     text-align: center;
+    margin: 5px;
     font-size: 16px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     position: relative;
     color: black;
 }
@@ -14,7 +20,6 @@
 .img-pig {
    
     width: 45%;
-    height: 45%;
     
 }
 
@@ -85,8 +90,20 @@
 
 .bi-arrows-angle-expand {
 
-    position: relative;
-    top: -250px;
-    left: 60px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
     font-size: 18px;
+}
+
+
+/* for update */
+.updatecard{
+    background-color: #fff2c7;
+}
+.Updateinput{
+    width: 80%;
+}
+.update-button-container{
+    color: black;
 }

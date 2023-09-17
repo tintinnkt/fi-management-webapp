@@ -67,6 +67,7 @@ const Login = ({ responseGoogleSuccess, responseGoogleFailure, logOut }) => {
         </div>
         
         <div className={styles.lgbottom}>
+          <p className={styles.des} >แอปลิเคชันนี้เป็นโครงงานวิทยาศาสตร์ สาขาคอมพิวเตอร์</p>
           <DevPack />
         </div>
       </div>
