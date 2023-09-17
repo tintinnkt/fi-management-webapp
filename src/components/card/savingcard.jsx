@@ -68,7 +68,7 @@ function Savingcard({ prop }) {
             value={editedData.name}
             onChange={handleInputChange}
           />
-          <div className="p-label"> {percent}%</div>
+          
           <input
             className="Updateinput"
             type="number"
