@@ -47,6 +47,7 @@
     display: flex;
     flex-wrap: wrap;
     color: black;
+    justify-content: center;
 }
 
 .bar {
@@ -117,4 +118,7 @@
     margin-left: 32px;
     margin-top: 12px;
     
+}
+.datepicker-container input{
+    width: 80%;
 }

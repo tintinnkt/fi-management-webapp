@@ -4,7 +4,7 @@ import styles from './Adding.module.css';
 import 'react-datepicker/dist/react-datepicker.css';
 
 import { db } from '../../../utilities/firebase-config';
-import { addDoc, collection, doc, getDocs } from 'firebase/firestore';
+import { addDoc, collection } from 'firebase/firestore';
 import { AuthContext } from '../../../App';
 //component
 import Topic from '../../../components/topic/topic';

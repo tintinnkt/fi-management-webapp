@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import { db } from '../../utilities/firebase-config';
-import { collection, doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc } from 'firebase/firestore';
 import './card.css';
 
 function Savingcard({ prop }) {
@@ -9,11 +9,7 @@ function Savingcard({ prop }) {
   const [editedData, setEditedData] = useState({ name: prop.name, goal: prop.goal, current: prop.current });
   const piggyUrl = "https://cdn-icons-png.flaticon.com/512/9030/9030761.png";
   const percent = (editedData.current / editedData.goal * 100).toFixed(1);
-  const docRef=doc(db,"Savingbox",prop.id)
 
-  function showhideupdate() {
-    setShowupdate(!showupdate);
-  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +24,7 @@ function Savingcard({ prop }) {
     
         await setDoc(docRef, editedData, { merge: true });
     
-        console.log('Document updated successfully');
+        console.log('Saving updated successfully');
       } catch (error) {
         console.error('Error updating document:', error);
       }
@@ -49,12 +45,12 @@ function Savingcard({ prop }) {
     <div className='save-con'>
       {!showupdate ? (
         <div className="savecard">
-          <i className="bi bi-arrows-angle-expand" onClick={() => showhideupdate()} />
+          <i className="bi bi-arrows-angle-expand" onClick={() => setShowupdate(1)} />
           <img className="img-pig" src={piggyUrl} alt="Piggy Bank" />
           <div className="Name">{editedData.name}</div>
           <div className="perc">
             <div className="bar"><ProgressBar now={percent} label={`${percent}%`} /></div>
-            <div className="p-label"> {percent}%</div>
+            {percent<=25 ? <div className="p-label"> {percent}%</div>: null}
           </div>
           <div className="Goal">Goal : {editedData.goal}</div>
           <div className="Recent">Current : {editedData.current}</div>
