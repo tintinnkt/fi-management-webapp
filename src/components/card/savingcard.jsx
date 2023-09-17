@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
+import { db } from '../../utilities/firebase-config';
+import { collection, doc, setDoc } from 'firebase/firestore';
 import './card.css';
 
 function Savingcard({ prop }) {
@@ -7,6 +9,7 @@ function Savingcard({ prop }) {
   const [editedData, setEditedData] = useState({ name: prop.name, goal: prop.goal, current: prop.current });
   const piggyUrl = "https://cdn-icons-png.flaticon.com/512/9030/9030761.png";
   const percent = (editedData.current / editedData.goal * 100).toFixed(1);
+  const docRef=doc(db,"Savingbox",prop.id)
 
   function showhideupdate() {
     setShowupdate(!showupdate);
@@ -19,15 +22,25 @@ function Savingcard({ prop }) {
       [name]: value,
     });
   };
-
+    const updateSavingData = async () => {
+      try {
+        const docRef = doc(db, "Savingbox", prop.id);
+    
+        await setDoc(docRef, editedData, { merge: true });
+    
+        console.log('Document updated successfully');
+      } catch (error) {
+        console.error('Error updating document:', error);
+      }
+    };
+  
   const handleSave = () => {
-    // You can add code here to save the editedData to your backend or perform any other actions
+    updateSavingData()
     setShowupdate(false);
   };
   
 
   const handleDiscard = () => {
-    // Reset the edited data back to the original data and hide the update section
     setEditedData({ name: prop.name, goal: prop.goal, current: prop.current });
     setShowupdate(false);
   };
