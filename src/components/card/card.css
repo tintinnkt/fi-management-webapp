@@ -122,3 +122,16 @@
 .datepicker-container input{
     width: 80%;
 }
+.del-btn-con{
+    padding-top: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40%;
+    
+}
+.del-btn{
+ background-color: #ff6a45;
+ color: #fff2c7;
+ border-radius: 8px;
+}

@@ -41,6 +41,10 @@ function Savingcard({ prop }) {
     setShowupdate(false);
   };
 
+  const handleDel = () => {
+
+  }
+
   return (
     <div className='save-con'>
       {!showupdate ? (
@@ -82,6 +86,9 @@ function Savingcard({ prop }) {
           <div className="update-button-container">
             <button className="save-button" onClick={handleSave}>Save</button>
             <button className="discard-button" onClick={handleDiscard}>Discard</button>
+          </div>
+          <div className="del-btn-con">
+            <button className="del-btn" onClick={null}>Delete</button>
           </div>
         </div>
       )}
